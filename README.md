@@ -2,4 +2,4 @@
 
 ### ls
     basejava    数据结构
-    mathjava    算发
+    mathjava    算法
