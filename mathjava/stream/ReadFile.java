@@ -27,8 +27,11 @@ public class ReadFile {
         } while (c != 'q');
     }
 
+    /**
+     * local readFile
+     */
     private static void readLocalFile() {
-        File f = new File("/Users/macbook/IDEAProjects/javaMath/src/stream/test.json");
+        File f = new File("./test.json");
         try {
             InputStream out = new FileInputStream(f);
             System.out.print(out);
