@@ -7,9 +7,10 @@ package lambda;
  */
 @FunctionalInterface
 interface LambdaFunc {
+    // 需要自己实现的方法
     int doubleNum(int i);
 
-    // 默认方法
+    // 默认写好的方法
     default int add(int x, int y) {
         return x + y;
     }
