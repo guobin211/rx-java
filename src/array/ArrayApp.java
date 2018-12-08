@@ -23,6 +23,7 @@ public class ArrayApp {
         searchKey = 55;
         for (j = 0; j < arr.length; j++) {
             if (arr[j] == searchKey) {
+                System.out.print("find " + arr[j]);
                 break;
             }
         }
