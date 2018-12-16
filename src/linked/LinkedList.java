@@ -9,11 +9,19 @@ package linked;
 public class LinkedList<E> {
 
     int size;
-    // 节点的头部
+
+    /**
+     * 节点的头部
+     */
     private Node head;
+    /**
+     * 虚拟的节点头部
+     */
+    private Node dummyHead;
 
     public LinkedList() {
         head = null;
+        dummyHead = new Node();
         size = 0;
     }
 
@@ -26,53 +34,118 @@ public class LinkedList<E> {
     }
 
     /**
-     * 在链表头部添加元素
-     * @param e element
-     */
-    public void addFirst(E e) {
-//        Node node = new Node(e);
-//        node.next = head;
-//        head = node;
-
-        // 一行代码实现
-        head = new Node(e, head);
-        size++;
-    }
-
-    /**
      * insert 插入元素
+     *
      * @param index index
-     * @param e element
+     * @param e     element
      */
     public void insert(int index, E e) {
         if (index < 0 || index > size) {
             throw new IllegalArgumentException("index >= 0 and index <= size");
         }
-        // 插入node节点
-        if (index == 0) {
-            addFirst(e);
-        } else {
-            Node prev = head;
-            for (int i = 0; i < index-1; i++) {
-                prev = prev.next;
-            }
 
-//            Node node = new Node(e);
-//            node.next = prev.next;
-//            prev.next = node;
-
-            // 一行代码实现
-            prev.next = new Node(e, prev.next);
-            size++;
+        Node prev = dummyHead;
+        for (int i = 0; i < index; i++) {
+            prev = prev.next;
         }
+        prev.next = new Node(e, prev.next);
+        size++;
+    }
+
+    /**
+     * 在链表头部添加元素
+     *
+     * @param e element
+     */
+    public void addFirst(E e) {
+        insert(0, e);
     }
 
     /**
      * 尾部添加
+     *
      * @param e element
      */
     public void addLast(E e) {
         insert(size, e);
+    }
+
+    /**
+     * get
+     *
+     * @param index index
+     * @return element
+     */
+    public E get(int index) {
+        if (index < 0 || index >= size) {
+            throw new IllegalArgumentException("Illegal index!");
+        }
+
+        Node current = dummyHead.next;
+        for (int i = 0; i < index; i++) {
+            current = current.next;
+        }
+        return current.e;
+    }
+
+    /**
+     * set
+     *
+     * @param index index
+     * @param e     element
+     */
+    public void set(int index, E e) {
+        if (index < 0 || index >= size) {
+            throw new IllegalArgumentException("Illegal index!");
+        }
+        Node cur = dummyHead.next;
+        for (int i = 0; i < index; i++) {
+            cur = cur.next;
+        }
+        cur.e = e;
+    }
+
+    public E remove(int index) {
+        Node prev = dummyHead;
+        for (int i = 0; i < index; i++) {
+            prev = prev.next;
+        }
+        Node resNode = prev.next;
+        prev.next = resNode.next;
+        resNode.next = null;
+
+        size--;
+        return resNode.e;
+    }
+
+    /**
+     * has e
+     *
+     * @param e element
+     * @return boolean
+     */
+    public boolean contains(E e) {
+        Node cur = dummyHead.next;
+        while (cur != null) {
+            if (cur.e.equals(e)) {
+                return true;
+            } else {
+                cur = cur.next;
+            }
+        }
+        return false;
+    }
+
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder();
+
+        Node cur = dummyHead.next;
+        while (cur != null) {
+            stringBuilder.append(cur).append("->");
+            cur = cur.next;
+        }
+
+        return stringBuilder.toString();
     }
 
     /**
