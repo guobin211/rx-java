@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 /**
  * @version  1.0  RecursionApp
  * @author  guobin201314@gmail.com
- * @date  2018/11/20 23:25
+ * 2018/11/20 23:25
  */
 public class RecursionApp {
     public static void main(String[] args) {
