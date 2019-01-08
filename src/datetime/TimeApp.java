@@ -11,7 +11,7 @@ public class TimeApp {
         zonedDate();
     }
 
-    static void showTime() {
+    private static void showTime() {
         LocalDate d = LocalDate.now();
         LocalTime t = LocalTime.now();
         LocalDateTime dt = LocalDateTime.now();
@@ -33,7 +33,7 @@ public class TimeApp {
     /**
      * 时区转换
      */
-    static void zonedDate() {
+    private static void zonedDate() {
         ZonedDateTime z = ZonedDateTime.now();
         ZonedDateTime usa = z.withZoneSameInstant(ZoneId.of("America/New_York"));
         System.out.println("纽约时间：" + usa);

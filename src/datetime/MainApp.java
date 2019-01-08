@@ -13,7 +13,7 @@ public class MainApp {
         System.out.println(n);
         showDate();
     }
-    static void showDate() {
+    private static void showDate() {
         Date date = new Date();
         //  Sun Nov 18 10:29:09 CST 2018
         System.out.println(date.toString());
