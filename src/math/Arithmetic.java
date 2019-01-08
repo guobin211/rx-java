@@ -6,7 +6,7 @@ package math;
  * @author GuoBin201314@gmail.com on 2018/11/16 10:57
  */
 public class Arithmetic {
-    public static void main(String[] args) {
+    public static void main(String[] arg) {
         int a = 3;
         int b = ++a;
         int c = 3;

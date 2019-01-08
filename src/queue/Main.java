@@ -3,7 +3,7 @@ package queue;
 import java.util.Random;
 
 /**
- * File Main.java
+ * File MainBus.java
  *
  * @author guobin201314@gmail.com on 2018/12/8 21:42
  * @version jdk 1.8.0

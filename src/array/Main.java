@@ -1,7 +1,7 @@
 package array;
 
 /**
- * FileName Main.java
+ * FileName MainBus.java
  *
  * @author guobin201314@gmail.com on 2018/12/8 10:32
  * @version 1.0.0

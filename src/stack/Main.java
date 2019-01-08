@@ -1,7 +1,7 @@
 package stack;
 
 /**
- * FileName Main.java
+ * FileName MainBus.java
  *
  * @author guobin201314@gmail.com on 2018/12/8 18:59
  * @version 1.0.0

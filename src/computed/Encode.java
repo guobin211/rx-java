@@ -20,16 +20,17 @@ public class Encode {
         String ori = new String(Base64.getDecoder().decode(bs), StandardCharsets.UTF_8);
         System.out.println(ori);
         byte[] res;
-        res = mdMatch((s+sort).getBytes(StandardCharsets.UTF_8));
+        res = mdMatch((s + sort).getBytes(StandardCharsets.UTF_8));
         System.out.println(String.format("%032x", new BigInteger(1, res)));
     }
 
     /**
      * md5摘要算法
+     *
      * @param input byte[]
      * @return byte[]
      */
-    static byte[] mdMatch(byte[] input) {
+    private static byte[] mdMatch(byte[] input) {
         MessageDigest md = null;
         try {
             md = MessageDigest.getInstance("MD5");

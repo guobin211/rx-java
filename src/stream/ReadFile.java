@@ -31,7 +31,7 @@ public class ReadFile {
      * local readFile
      */
     private static void readLocalFile() {
-        File f = new File("./test.json");
+        File f = new File("/Users/macbook/Documents/GitHub/rx-java/src/stream/test.json");
         try {
             InputStream out = new FileInputStream(f);
             System.out.print(out);
