@@ -10,7 +10,7 @@ interface LambdaFunc {
     // 需要自己实现的方法
     int doubleNum(int i);
 
-    // 默认写好的方法
+    // 默认的方法
     default int add(int x, int y) {
         return x + y;
     }
@@ -24,14 +24,13 @@ interface LambdaFunc {
  */
 public class LambdaFunction {
 
-    public static int aDouble = 2;
-
     public static void main(String[] args) {
         //  箭头函数
         LambdaFunc lambdaFunc1 = i -> i * 2;
         System.out.println(lambdaFunc1);
 
         //  函数返回值
+        int aDouble = 2;
         int res = lambdaFunc1.doubleNum(aDouble);
         System.out.println(res);
 
