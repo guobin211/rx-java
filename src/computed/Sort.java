@@ -7,8 +7,8 @@ public class Sort {
 
         printArray(ints);
 
-        bubbleSort(ints);
-
+//        bubbleSort(ints);
+        insertSort(ints);
         printArray(ints);
     }
 
