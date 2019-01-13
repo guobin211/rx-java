@@ -38,3 +38,7 @@ out/production/rx-java/
 .idea/kotlinc.xml
 out/production/HelloJava/
 .idea/scala_settings.xml
+.gradle/
+gradle/wrapper/gradle-wrapper.properties
+out/
+
