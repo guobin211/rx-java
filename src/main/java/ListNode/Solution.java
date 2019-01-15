@@ -28,9 +28,7 @@ public class Solution {
         ListNode prev = head;
         while (prev.next != null) {
             if (prev.next.val == val) {
-//                ListNode delNode = prev.next;
-//                prev.next = delNode.next;
-//                delNode.next =null;
+                // 跳一个
                 prev.next = prev.next.next;
             } else {
                 prev = prev.next;
@@ -42,9 +40,11 @@ public class Solution {
 
     public static void main(String[] args) {
         int[] nums = {1,2,3,4,5,6,2,4};
-        ListNode head =new ListNode(nums);
+        ListNode head = new ListNode(nums);
         System.out.println(head);
         ListNode res = (new Solution()).removeElements(head, 5);
         System.out.println(res);
+
+        System.out.println(res.toArray());
     }
 }

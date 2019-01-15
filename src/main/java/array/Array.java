@@ -12,8 +12,6 @@ public class Array<E> {
     private int size;
 
     public Array(int length) {
-//        data = new int[length];
-        // 使用泛形强制转换
         data = (E[]) new Object[length];
         size = 0;
     }
@@ -69,7 +67,6 @@ public class Array<E> {
         }
         // 数组需要扩容,动态数组
         if (size == data.length) {
-//              throw new IllegalArgumentException("Array is full");
             resize(2 * data.length);
         }
         int i = size - 1;

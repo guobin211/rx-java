@@ -8,7 +8,7 @@ import java.util.Arrays;
  */
 public class ReadFile {
     public static void main(String[] args) {
-        File file = new File("test.txt");
+        File file = new File("src/main/stream/test.json");
         String path = file.getPath();
         String aPath = file.getAbsolutePath();
         String cPath = "";
@@ -28,7 +28,7 @@ public class ReadFile {
     }
 
     static void readFile() {
-        try (InputStream inputStream = new FileInputStream("src/test.txt")) {
+        try (InputStream inputStream = new FileInputStream("src/main/stream/test.json")) {
             int n;
             while ((n=inputStream.read()) != -1){
                 System.out.println(n + "bytes read");
@@ -45,7 +45,7 @@ public class ReadFile {
      * reader 对象
      */
     static void readLocal() {
-        String path = "src/test.txt";
+        String path = "src/main/stream/test.json";
         try (InputStream input = new FileInputStream(path)) {
             System.out.println("read" + path + "...");
             BufferedReader reader = new BufferedReader(new InputStreamReader(input));
