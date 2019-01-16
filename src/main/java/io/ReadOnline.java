@@ -13,11 +13,16 @@ import java.nio.charset.StandardCharsets;
  * io   ReadOnline
  *
  * @author guobin201314@gmail.com on 2019-01-16
- * @deprecated 1.8
+ * @version  1.0.0
  */
 public class ReadOnline {
 
     public static void main(String[] args) {
+        MyVersion myVersion = new MyVersion();
+        myVersion.setVersion("1.0.2");
+        System.out.println(myVersion.toString());
+        System.out.println(myVersion.getVersion());
+
         String api = "https://www.baidu.com/";
         readHtml(api);
 
@@ -92,6 +97,5 @@ public class ReadOnline {
 
         System.out.println(stringBuilder);
 
-        MyVersion myVersion = new MyVersion();
     }
 }

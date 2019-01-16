@@ -4,7 +4,7 @@ package ListNode;
  * ListNode
  *
  * @author guobin201314@gmail.com on 2019-01-13
- * @deprecated 1.8
+ * @version  1.0.0
  */
 public class ListNode {
 

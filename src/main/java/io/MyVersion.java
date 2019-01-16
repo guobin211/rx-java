@@ -4,7 +4,7 @@ package io;
  * io   MyVersion
  *
  * @author guobin201314@gmail.com on 2019-01-16
- * @deprecated 1.8
+ * @version  1.0.0
  */
 public class MyVersion {
 
@@ -19,7 +19,6 @@ public class MyVersion {
     }
 
     public String toString() {
-        return "{version:" + this.version + "}";
-
+        return String.format("{\"version\": \"%s\"}", this.version);
     }
 }
