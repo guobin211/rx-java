@@ -1,14 +1,15 @@
 package io;
 
 import java.io.*;
-import java.util.Arrays;
+import java.nio.charset.StandardCharsets;
+
 
 /**
  * @author GuoBin201314@gmail.com on 2018/11/17 19:53
  */
 public class ReadFile {
     public static void main(String[] args) {
-        File file = new File("src/main/stream/test.json");
+        File file = new File("src/main/java/stream/test.json");
         String path = file.getPath();
         String aPath = file.getAbsolutePath();
         String cPath = "";
@@ -18,34 +19,20 @@ public class ReadFile {
             e.printStackTrace();
         }
 
-//        System.out.println(file);
-//        System.out.println(path);
-//        System.out.println(aPath);
-//        System.out.println(cPath);
-//        System.out.println(file.canRead());
-//        readFile();
+        System.out.println(file);
+        System.out.println(path);
+        System.out.println(aPath);
+        System.out.println(cPath);
+        System.out.println(file.canRead());
         readLocal();
-    }
-
-    static void readFile() {
-        try (InputStream inputStream = new FileInputStream("src/main/stream/test.json")) {
-            int n;
-            while ((n=inputStream.read()) != -1){
-                System.out.println(n + "bytes read");
-            }
-//            byte[] bt = inputStream.readAllBytes();
-//            String st = Arrays.toString(bt);
-//            System.out.println(st);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        readAsString();
     }
 
     /**
      * reader 对象
      */
     static void readLocal() {
-        String path = "src/main/stream/test.json";
+        String path = "src/main/java/stream/test.json";
         try (InputStream input = new FileInputStream(path)) {
             System.out.println("read" + path + "...");
             BufferedReader reader = new BufferedReader(new InputStreamReader(input));
@@ -55,7 +42,30 @@ public class ReadFile {
         }
     }
 
-    static void readAsObject() {
-
+    /**
+     * java 读取json文件
+     */
+    static void readAsString() {
+        String path = "src/main/java/stream/test.json";
+        try {
+            FileInputStream fileInputStream = new FileInputStream(path);
+            InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream, StandardCharsets.UTF_8);
+            StringBuilder stringBuilder = new StringBuilder();
+            while (true) {
+                try {
+                    if (!inputStreamReader.ready()) break;
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    stringBuilder.append((char) inputStreamReader.read());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            System.out.println(stringBuilder.toString());
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }
