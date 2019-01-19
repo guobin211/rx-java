@@ -6,7 +6,7 @@ interface IBeef {
 }
 
 interface IDrink {
-    void eat();
+    void drink();
 }
 
 interface IStore {
@@ -14,14 +14,20 @@ interface IStore {
     IDrink getDrink();
 }
 
+/**
+ * 饮品店
+ */
 class DrinkShop implements IDrink{
 
     @Override
-    public void eat() {
+    public void drink() {
         System.out.println("DrinkShop eat");
     }
 }
 
+/**
+ * 牛肉店
+ */
 class BeefShop implements IBeef {
 
     @Override
@@ -30,6 +36,9 @@ class BeefShop implements IBeef {
     }
 }
 
+/**
+ * 超市
+ */
 class SuperMarket implements IStore{
 
     @Override
@@ -66,6 +75,6 @@ public class AbstractFactory {
         iBeef.eat();
 
         IDrink id = iStore.getDrink();
-        iDrink.eat();
+        iDrink.drink();
     }
 }
