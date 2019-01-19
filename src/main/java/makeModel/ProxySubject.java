@@ -5,10 +5,10 @@ interface Meeting {
 }
 
 class Boos implements Meeting {
-
     @Override
     public void call() {
-        System.out.println("Boos call Meeting");
+        String secret = "password";
+        System.out.println("Boos call Meeting with " + secret);
     }
 }
 
