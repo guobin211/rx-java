@@ -38,6 +38,29 @@ class PowerAdapter extends PowerChina implements PowerMac {
 }
 
 /**
+ * 通过内部对象实现代理
+ */
+class NoExtendAdapter implements PowerMac {
+
+    private PowerChina powerChina;
+    public NoExtendAdapter(PowerChina powerChina) {
+        this.powerChina = powerChina;
+    }
+
+    @Override
+    public void getPowerForMac() {
+        powerChina.getPowerChina();
+        transform();
+        System.out.println("输出 48v 电压");
+    }
+
+    private void transform() {
+        System.out.println("转换电压");
+    }
+}
+
+
+/**
  * makeModel   AdapterMode
  *
  * @author guobin201314@gmail.com on 2019-01-19
@@ -46,9 +69,11 @@ class PowerAdapter extends PowerChina implements PowerMac {
 public class AdapterMode {
     public static void main(String[] args) {
         System.out.println("适配器模式 AdapterMode");
-
+        // extend 实现代理
         MacBook macBook = new MacBook();
-
         macBook.PowerOn(new PowerAdapter());
+        // 内部对象实现代理
+        MacBook macBook1 = new MacBook();
+        macBook1.PowerOn(new NoExtendAdapter(new PowerChina()));
     }
 }
