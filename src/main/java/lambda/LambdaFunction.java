@@ -10,7 +10,7 @@ interface LambdaFunc {
     // 需要自己实现的方法
     int doubleNum(int i);
 
-    // 默认的方法
+    // 默认实现的方法
     default int add(int x, int y) {
         return x + y;
     }
