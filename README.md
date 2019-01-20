@@ -8,8 +8,11 @@ design your code
 
 ### design folder is source map
 
+### array，linked, list实现
+
 [![array-linked-list](https://github.com/guobin211/rx-java/blob/master/design/array.png)](https://github.com/guobin211/rx-java)
 
+### queue, stack, node 实现
 [![queue-stack](https://github.com/guobin211/rx-java/blob/master/design/queue.png)](https://github.com/guobin211/rx-java)
 
 
