@@ -1,7 +1,7 @@
 package array;
 
 /**
- * FileName Student.java
+ * FileName Students.java
  *
  * @author guobin201314@gmail.com on 2018/12/8 11:07
  * @version 1.0.0
@@ -17,7 +17,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return String.format("Student (name: %s, score: %d)",name, score);
+        return String.format("Students (name: %s, score: %d)",name, score);
     }
 
     public static void main(String[] args) {

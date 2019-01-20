@@ -4,7 +4,7 @@ design your code
     
 > need jdk 1.8 +
 > this project for java
-> also for other OOP language
+> also for other language
 
 ### design folder is source map
 
