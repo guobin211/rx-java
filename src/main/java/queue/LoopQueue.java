@@ -24,7 +24,7 @@ public class LoopQueue<E> implements Queue <E> {
         this(10);
     }
 
-    public int getCpacity() {
+    public int getCapacity() {
         return data.length - 1;
     }
 
@@ -42,7 +42,7 @@ public class LoopQueue<E> implements Queue <E> {
     public void enqueue(E e) {
         // 扩容
         if ((tail + 1) % data.length == front) {
-            resize(getCpacity() * 2);
+            resize(getCapacity() * 2);
         }
         data[ tail ] = e;
         tail = (tail + 1) % data.length;
@@ -61,8 +61,8 @@ public class LoopQueue<E> implements Queue <E> {
         size--;
 
         // 缩容
-        if (size == getCpacity() / 4 && getCpacity() > 4) {
-            resize(getCpacity() / 2);
+        if (size == getCapacity() / 4 && getCapacity() > 4) {
+            resize(getCapacity() / 2);
         }
 
         return res;
@@ -75,7 +75,7 @@ public class LoopQueue<E> implements Queue <E> {
 
     public String toString() {
         StringBuilder res = new StringBuilder();
-        res.append(String.format("Queue: size = %d, capacity = %d", size, getCpacity()));
+        res.append(String.format("Queue: size = %d, capacity = %d", size, getCapacity()));
         res.append("front [");
 
         for (int i = front; i !=tail; i=(i+1)%data.length) {

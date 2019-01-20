@@ -1,4 +1,4 @@
-## rx-java
+# rx-java
 
 design your code
     
@@ -6,6 +6,11 @@ design your code
 > this project for java
 > also for other OOP language
 
+### design folder is source map
+
+[![array-linked-list](https://github.com/guobin211/rx-java/blob/master/design/array.png)](https://github.com/guobin211/rx-java)
+
+[![queue-stack](https://github.com/guobin211/rx-java/blob/master/design/queue.png)](https://github.com/guobin211/rx-java)
 
 
 ### package
@@ -21,7 +26,7 @@ design your code
     lambda
     linked
     logic
-    amth
+    math
     metadata
     makeModel
     onject
@@ -59,5 +64,5 @@ design your code
 
 ### observable
 
-[![observable](https://github.com/guobin211/rx-java/blob/master/design/observer.png)]
-(https://github.com/guobin211/rx-java)
+[![observable](https://github.com/guobin211/rx-java/blob/master/design/observer.png)](https://github.com/guobin211/rx-java)
+
