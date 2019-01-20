@@ -1,23 +1,31 @@
-## rx-java for data structure
+## rx-java
+
+design your code
     
 > need jdk 1.8 +
 > this project for java
-> also can use for other OOP language
+> also for other OOP language
 
-### ls
+
+
+### package
     array
     bank
     basic
     collection
     computed
     datetime
+    dip
     io
+    isp
     lambda
     linked
     logic
     amth
     metadata
+    makeModel
     onject
+    observerMode
     queue
     recursion
     stack
@@ -26,7 +34,7 @@
     types
     windstep
     
-### example array
+### array
     
     arrayList
     arrayLinedList
@@ -34,7 +42,7 @@
     stack
     queue
     
-### example collection
+### collection
     
     map
     set
@@ -43,9 +51,13 @@
     collectionStack
     collectionQueue
     
-### example lambda
+### lambda
 
     function interface
     arrow function
     stream function
-    ...
+
+### observable
+
+[![rx-java-observable](https://github.com/guobin211/rest-express/blob/master/design/observer.png)]
+(https://github.com/guobin211/rx-java)
