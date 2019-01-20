@@ -59,5 +59,5 @@ design your code
 
 ### observable
 
-[![rx-java-observable](https://github.com/guobin211/rest-express/blob/master/design/observer.png)]
+[![observable](https://github.com/guobin211/rx-java/blob/master/design/observer.png)]
 (https://github.com/guobin211/rx-java)
