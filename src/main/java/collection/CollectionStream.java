@@ -87,7 +87,7 @@ enum Gender {
  * 班级
  */
 enum Grade {
-    ONE, TWO, THREE, FOUR;
+    ONE, TWO, THREE, FOUR
 }
 
 public class CollectionStream {
