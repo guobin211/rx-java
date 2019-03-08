@@ -31,7 +31,7 @@ public class ReadFile {
     /**
      * reader 对象
      */
-    static void readLocal() {
+    private static void readLocal() {
         String path = "src/main/java/stream/test.json";
         try (InputStream input = new FileInputStream(path)) {
             System.out.println("read" + path + "...");
@@ -45,7 +45,7 @@ public class ReadFile {
     /**
      * java 读取json文件
      */
-    static void readAsString() {
+    private static void readAsString() {
         String path = "src/main/java/stream/test.json";
         try {
             FileInputStream fileInputStream = new FileInputStream(path);
