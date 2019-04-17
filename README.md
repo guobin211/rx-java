@@ -6,7 +6,18 @@ design your code
 > this project for java
 > also for other language
 
-### design folder is source map
+### design
+
+    软件设计原则
+    高内聚,低耦合
+    单一职责原则
+    开放封闭原则
+    单例模式
+    工厂模式
+    代理模式
+    适配器模式
+    观察者模式
+
 
 ### array，linked, list实现
 

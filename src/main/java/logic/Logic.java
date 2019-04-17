@@ -8,6 +8,7 @@ public class Logic {
         String test;
         test = "hello";
         isNull(test);
+        System.out.println(test.getClass());
     }
     private static void isNull(String s) {
         String test = "hello";
