@@ -45,3 +45,7 @@ gradle/wrapper/gradle-wrapper.properties
 out/
 libs/
 
+build/resources/
+build/tmp/
+src/main/resources/
+src/test/
