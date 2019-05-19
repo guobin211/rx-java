@@ -2,8 +2,6 @@ package collection;
 
 import java.util.*;
 import java.util.stream.Collectors;
-
-import org.apache.commons.collections4.MapUtils;
 /**
  * 学生 对象
  */
@@ -123,17 +121,17 @@ public class CollectionStream {
         Map<Boolean, List<Student>> genders = student.stream().collect(
             Collectors.partitioningBy(s -> s.getGender() == Gender.MALE));
         // System.out.println("男女学生列表:" + genders);
-        MapUtils.verbosePrint(System.out, "男女学生列表", genders);
+//        MapUtils.verbosePrint(System.out, "男女学生列表", genders);
 
         // 分组
         Map<Grade, List<Student>> grades = student.stream()
             .collect(Collectors.groupingBy(Student::getGrade));
-        MapUtils.verbosePrint(System.out, "学生班级列表", grades);
+//        MapUtils.verbosePrint(System.out, "学生班级列表", grades);
 
         // 得到所有班级学生的个数
         Map<Grade, Long> gradesCount = student.stream().collect(Collectors
             .groupingBy(Student::getGrade, Collectors.counting()));
-        MapUtils.verbosePrint(System.out, "班级学生个数列表", gradesCount);
+//        MapUtils.verbosePrint(System.out, "班级学生个数列表", gradesCount);
 
     }
 
