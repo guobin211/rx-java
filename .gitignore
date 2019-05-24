@@ -8,6 +8,14 @@
 
 # Log file
 *.log
+.settings
+.vscode
+bin
+gradle
+out
+.gradle
+
+
 
 # BlueJ files
 *.ctxt

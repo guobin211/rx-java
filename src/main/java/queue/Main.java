@@ -20,7 +20,7 @@ public class Main {
             q.enqueue(random.nextInt(Integer.MAX_VALUE));
         }
         // 出队测试
-        for (int i = 0; i <opCount ; i++) {
+        for (int i = 0; i < opCount; i++) {
             q.dequeue();
         }
 
@@ -31,13 +31,13 @@ public class Main {
     public static void main(String[] args) {
         int opCount = 110000;
         // 分别测试数组和循环队列的时间消耗
-        ArrayQueue<Integer> arrayQueue = new ArrayQueue <>();
+        ArrayQueue<Integer> arrayQueue = new ArrayQueue<>();
         double time1 = testQueue(arrayQueue, opCount);
 
-        LoopQueue<Integer> loopQueue = new LoopQueue <>();
+        LoopQueue<Integer> loopQueue = new LoopQueue<>();
         double time2 = testQueue(loopQueue, opCount);
 
-        System.out.println( "ArrayQueue Time: " + time1 + "s," + "LoopQueue time: " + time2 + "s");
+        System.out.println("ArrayQueue Time: " + time1 + "s," + "LoopQueue time: " + time2 + "s");
 
     }
 

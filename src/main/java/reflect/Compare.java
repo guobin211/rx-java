@@ -1,5 +1,6 @@
 package reflect;
 
+import java.lang.reflect.Field;
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -15,6 +16,13 @@ public class Compare {
         Arrays.sort(strings, String::compareToIgnoreCase);
         System.out.println(Arrays.toString(strings));
         lambda(strings);
+
+        Field[] res = Arrays.class.getDeclaredFields();
+
+        for (Field re : res) {
+            System.out.println(re);
+        }
+
     }
 
     /**
