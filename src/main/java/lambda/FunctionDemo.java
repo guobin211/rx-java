@@ -30,8 +30,8 @@ public class FunctionDemo {
     }
 
     public static void getMinNumber() {
-        int[] nums = {33,-55,22,-66,88,99};
-        int min = IntStream.of(nums).min().getAsInt();
+        int[] num = {33,-55,22,-66,88,99};
+        int min = IntStream.of(num).min().getAsInt();
         System.out.println(min);
     }
 }

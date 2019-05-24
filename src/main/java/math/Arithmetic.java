@@ -13,11 +13,9 @@ public class Arithmetic {
         int d = --c;
         System.out.println("进行自增运算后的值等于" + b);
         System.out.println("进行自减运算后的值等于" + d);
-        math();
-        operation();
     }
 
-    private static void math() {
+    public void math() {
         int a = 5;
         int b = 5;
         //  前缀自增自减法(++a,--a): 先进行自增或者自减运算，再进行表达式运算
@@ -31,7 +29,7 @@ public class Arithmetic {
     /**
      * 位运算符
      */
-    private static void operation() {
+    public void operation() {
         /* 60 = 0011 1100 */
         int a = 60;
         /* 13 = 0000 1101 */
