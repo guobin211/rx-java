@@ -1,8 +1,6 @@
 # rx-java
-
-design your code
     
-> need jdk 1.8 +
+> need jdk 11
 > this project for java
 > also for other language
 
@@ -75,8 +73,4 @@ design your code
     function interface
     arrow function
     stream function
-
-### observable
-
-[![observable](https://github.com/guobin211/rx-java/blob/master/design/observer.png)](https://github.com/guobin211/rx-java)
 
