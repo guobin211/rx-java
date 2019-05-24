@@ -2,7 +2,7 @@
 
 design your code
     
-> need jdk 1.8 +
+> need jdk 11
 > this project for java
 > also for other language
 
