@@ -8,6 +8,8 @@ design your code
 
 ### design
 
+```bash
+
     软件设计原则
     高内聚,低耦合
     单一职责原则
@@ -19,6 +21,10 @@ design your code
     观察者模式
 
 
+```
+
+
+
 ### array，linked, list实现
 
 [![array-linked-list](https://github.com/guobin211/rx-java/blob/master/design/array.png)](https://github.com/guobin211/rx-java)
@@ -28,6 +34,9 @@ design your code
 
 
 ### package
+
+```bash
+
     array
     bank
     basic
@@ -53,28 +62,44 @@ design your code
     types
     windstep
     
+```
+
+    
 ### array
     
+```bash
+
     arrayList
     arrayLinedList
     arrayDoubleLinkedList
     stack
     queue
     
-### collection
+```
     
+### collection
+
+```bash
     map
     set
     hashMap
     collectionList
     collectionStack
     collectionQueue
+
+```
+    
+
     
 ### lambda
 
+```
     function interface
     arrow function
     stream function
+
+```
+
 
 ### observable
 
