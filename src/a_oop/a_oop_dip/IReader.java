@@ -1,4 +1,4 @@
-package a_oop_dip;
+package a_oop.a_oop_dip;
 
 /**
  * IReader
