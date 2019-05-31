@@ -1,4 +1,4 @@
-package a_oop_one_task;
+package a_oop.a_oop_one_task;
 
 /**
  * Main

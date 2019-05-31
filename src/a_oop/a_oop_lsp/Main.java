@@ -1,4 +1,4 @@
-package a_oop_lsp;
+package a_oop.a_oop_lsp;
 
 /**
  * Main

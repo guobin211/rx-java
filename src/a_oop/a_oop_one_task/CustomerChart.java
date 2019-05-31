@@ -1,7 +1,4 @@
-package a_oop_one_task;
-
-import java.util.ArrayList;
-import java.util.List;
+package a_oop.a_oop_one_task;
 
 /**
  * CustomerChart
