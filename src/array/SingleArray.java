@@ -20,6 +20,7 @@ class BsArray {
 
 public class SingleArray {
     public static void main(String[] args) {
+
         // 长度为3的数组
         BsArray[] bsArray = new BsArray[3];
         for (int i = 0; i < 3; i++) {
