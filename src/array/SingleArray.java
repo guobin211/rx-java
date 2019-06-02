@@ -5,10 +5,33 @@
 package array;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+
+class BsArray {
+    private static long counter;
+    private final long id = counter++;
+
+    @Override
+    public String toString() {
+        return "BsArray id:" + id;
+    }
+}
 
 public class SingleArray {
     public static void main(String[] args) {
+
+        // 长度为3的数组
+        BsArray[] bsArray = new BsArray[3];
+        for (int i = 0; i < 3; i++) {
+            bsArray[i] = new BsArray();
+        }
+
+        System.out.println(bsArray[2]);
+
+        List<Integer> integerList = new ArrayList<>(Arrays.asList(11, 12, 13, 14));
+        System.out.println(integerList);
+
         List<String> strings = new ArrayList<String>();
         int[] ints = new int[5];
         String[] names = {"jack", "tom"};
