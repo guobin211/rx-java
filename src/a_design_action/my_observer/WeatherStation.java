@@ -16,7 +16,7 @@ class WeatherStation extends Observable {
         // 发生change
         setChanged();
         // 通知obs
-        notifyObservers();
+        notifyObservers("温度发生变化");
     }
 
     private int temperature = 0;
