@@ -20,11 +20,11 @@ public class Client {
         System.out.println(eventBus.getRating());
 
         // java自带的 Observer
-//        WeatherStation weatherStation = new WeatherStation();
-//        ManC manC = new ManC();
-//        weatherStation.addObserver(manC);
-//        weatherStation.setTemperature(11);
-//        weatherStation.setTemperature(-5);
+        WeatherStation weatherStation = new WeatherStation();
+        ManC manC = new ManC();
+        weatherStation.addObserver(manC);
+        weatherStation.setTemperature(11);
+        weatherStation.setTemperature(-5);
 
     }
 }
