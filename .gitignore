@@ -58,3 +58,4 @@ build/resources/
 build/tmp/
 src/main/resources/
 src/test/
+src/io/file2.txt

@@ -1,5 +1,37 @@
+## io
 
-##
+```
+    字符流
+        Reader
+            BufferReader
+            InputStreamReader->FileReader
+            StringReader
+            PipedReader
+            CharArrayReader
+            FilterReader->PushBackReader
+
+        Writer
+            BufferWriter
+            OutputStreamWriter
+            PrinterWriter
+            StringWriter
+            PipedWriter
+            CharArrayWriter
+            FilterWriter
+    字节流
+        InputStream
+            FileInputStream
+            StringBufferInputStream
+            ByteArrayInputStream
+        OutputStream
+            FileOutputStream
+            ObjectOutputStream
+            FilterOutputStream
+            PipedOutputStream
+            ByteArrayOutputStream
+```
+
+## 算法
 
 数组
 栈和队列
