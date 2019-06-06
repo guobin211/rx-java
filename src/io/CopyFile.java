@@ -33,6 +33,7 @@ public class CopyFile {
             FileChannel fileChannelOut = new FileOutputStream(to).getChannel();
             // 拷贝文件到目标文件
             fileChannelIn.transferTo(0, fileChannelIn.size(), fileChannelOut);
+            System.out.println("复制文件完成");
             // 从源文件拷贝
             // fileChannelOut.transferFrom(fileChannelIn, 0, fileChannelIn.size());
         } catch (IOException e) {
@@ -41,7 +42,7 @@ public class CopyFile {
     }
     public static void main(String[] args) {
         String path = "/Users/guobin/idea/rx-java/src/io/";
-        System.out.println("复制文件");
+        System.out.println("复制文件...");
         copyTo(path + "file.txt", path + "file2.txt");
     }
 }
