@@ -12,10 +12,11 @@ import java.net.InetSocketAddress;
  */
 public class WebServer {
     public static void main(String[] args) {
+        IndexRouter indexRouter = new IndexRouter();
         try {
             HttpServer server = HttpServer.create(new InetSocketAddress(8888), 0);
-            server.createContext("/", new IndexRouter());
-            server.createContext("/index", new IndexRouter());
+            server.createContext("/", indexRouter);
+            server.createContext("/index", indexRouter);
             server.start();
             System.out.println("server start on port 8888");
         } catch (IOException e) {
