@@ -6,6 +6,13 @@ design your code
 > this project for java
 > also for other language
 
+```bash
+
+    libs
+        fastjson-1.2.58
+        jackson-all-1.9.0
+```
+
 ### design
 
 ```bash
