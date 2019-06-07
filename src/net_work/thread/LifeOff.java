@@ -10,9 +10,7 @@ public class LifeOff implements Runnable {
     private static int taskCOUNT = 0;
     private final int id = taskCOUNT++;
 
-    LifeOff() {
-        this.countDown = 10;
-    }
+    LifeOff() {}
 
     LifeOff(int countDown) {
         this.countDown = countDown;
