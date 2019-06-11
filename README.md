@@ -11,6 +11,7 @@ design your code
     libs
         fastjson-1.2.58
         jackson-all-1.9.0
+        rxjava-2.2.9
 ```
 
 ### design
