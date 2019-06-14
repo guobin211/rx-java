@@ -27,5 +27,16 @@ public class VectorClient {
         for (int i = 0; i < v.size(); i++) {
             System.out.println("第"+ (i + 1) + "个：" + v.elementAt(i));
         }
+
+        JsArray<Integer> jsArray = new JsArray(10);
+        for (int i = 0; i < 10; i++) {
+            jsArray.push(i);
+        }
+        System.out.println(jsArray.getSize());
+        System.out.println(jsArray.toString());
+        jsArray.add(jsArray.getSize(), 555);
+        System.out.println(jsArray.getSize());
+        System.out.println(jsArray.toString());
+        System.out.println(jsArray.reverse());
     }
 }
