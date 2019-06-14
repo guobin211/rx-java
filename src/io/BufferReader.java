@@ -11,7 +11,7 @@ import java.nio.channels.FileChannel;
  * @Author guobin201314@gmail.com on
  */
 public class BufferReader {
-    private static final int BSIZE = 1024;
+    private static final int BYTE_SIZE = 1024;
     private static final String PATH = "/Users/guobin/idea/rx-java/src/io/";
     public static void main(String[] args) throws Exception {
         // 文件通道 输出流
@@ -28,7 +28,7 @@ public class BufferReader {
 
         fileChannel = new FileInputStream(PATH + "file.txt").getChannel();
         // 字节缓冲器
-        ByteBuffer byteBuffer = ByteBuffer.allocate(BSIZE);
+        ByteBuffer byteBuffer = ByteBuffer.allocate(BYTE_SIZE);
         fileChannel.read(byteBuffer);
         // 反转
         byteBuffer.flip();
