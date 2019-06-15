@@ -1,15 +1,13 @@
 package queue;
 
-import stack.Array;
-
 import java.util.Random;
 
 /*
 
- * Main
+ * MainQueue
  * @Author guobin201314@gmail.com on 2019-06-12 21:45
  */
-public class Main {
+public class MainQueue {
 
     private static double testQueue(IEventQueue q, int opCount) {
         long startTime = System.nanoTime();
@@ -37,13 +35,19 @@ public class Main {
         }
 
         int opCount = 50000;
-        // array-queue 改变data o(n^2)
+        // array-queue 改变data o(n^2) 很慢
         ArrayQueue<Integer> arrayQueue1 = new ArrayQueue<>();
         double time1 = testQueue(arrayQueue1, opCount);
         System.out.println("ArrayQueue time:" + time1 + " s");
+
         // loop-queue 不改变data只改变索引 o(n)
         LoopQueue<Integer> loopQueue = new LoopQueue<>();
         double time2 = testQueue(loopQueue, opCount);
         System.out.println("LoopQueue time" + time2 + " s");
+
+        // linked-queue 不改变data只改变索引 o(n)
+        LinkedQueue<Integer> linkedQueue = new LinkedQueue<>();
+        double time3 = testQueue(linkedQueue, opCount);
+        System.out.println("LinkedQueue time" + time3 + " s");
     }
 }
