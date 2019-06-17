@@ -28,10 +28,7 @@ design your code
     适配器模式
     观察者模式
 
-
 ```
-
-
 
 ### array，linked, list实现
 
@@ -72,7 +69,6 @@ design your code
     
 ```
 
-    
 ### array
     
 ```bash
@@ -96,9 +92,7 @@ design your code
     collectionQueue
 
 ```
-    
 
-    
 ### lambda
 
 ```
@@ -107,7 +101,6 @@ design your code
     stream function
 
 ```
-
 
 ### observable
 
