@@ -1,6 +1,6 @@
 package stack;
 
-import link_list.LinkedList;
+import linklist.LinkedList;
 
 /*
  * LinkedStack
