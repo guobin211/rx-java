@@ -21,17 +21,17 @@ public class BST<E extends Comparable<E>> implements IBst<E> {
     }
 
     public void remove(E e) {
-        root = _remove(root, e);
+        root = remove(root, e);
     }
     // 删除节点
-    private Node _remove(Node node, E e) {
+    private Node remove(Node node, E e) {
         if (node == null) {
             return null;
         }
         if (e.compareTo(node.e) < 0) {
-            node.left = _remove(node.left, e);
+            node.left = remove(node.left, e);
         } else if (e.compareTo(node.e) > 0) {
-            node.right = _remove(node.right, e);
+            node.right = remove(node.right, e);
         } else {
             if (node.left == null) {
                 Node rightNode = node.right;
@@ -47,8 +47,8 @@ public class BST<E extends Comparable<E>> implements IBst<E> {
                 return leftNode;
             }
             // 获取要删除节点的最小子节点，替换要删除节点的位置
-            Node success = _minimum(node.right);
-            success.left = _removeMin(node.right);
+            Node success = minimum(node.right);
+            success.left = removeMin(node.right);
             size++;
 
             success.left = node.left;
@@ -62,18 +62,18 @@ public class BST<E extends Comparable<E>> implements IBst<E> {
     // 删除最大值
     public E removeMax() {
         E res = maximum();
-        root = _removeMax(root);
+        root = removeMax(root);
         return res;
     }
 
-    private Node _removeMax(Node node) {
+    private Node removeMax(Node node) {
         if (node.right == null) {
             Node leftNode = node.left;
             node.left = null;
             size--;
             return leftNode;
         } else {
-            node.right = _removeMax(node.right);
+            node.right = removeMax(node.right);
         }
         return node;
     }
@@ -81,18 +81,18 @@ public class BST<E extends Comparable<E>> implements IBst<E> {
     // 删除最小节点
     public E removeMin() {
         E res = minimum();
-        root = _removeMin(root);
+        root = removeMin(root);
         return res;
     }
     // 删除节点，返回新的node
-    private Node _removeMin(Node node) {
+    private Node removeMin(Node node) {
         if (node.left == null) {
             Node rightNode = node.right;
             node.right = null;
             size--;
             return rightNode;
         } else {
-            node.left = _removeMin(node.left);
+            node.left = removeMin(node.left);
         }
         return node;
     }
@@ -102,14 +102,14 @@ public class BST<E extends Comparable<E>> implements IBst<E> {
         if (size == 0) {
             throw new IllegalArgumentException("BST is empty!");
         }
-        return _maximum(root).e;
+        return maximum(root).e;
     }
 
-    private Node _maximum(Node node) {
+    private Node maximum(Node node) {
         if (node.right == null) {
             return node;
         } else {
-            return _maximum(node.right);
+            return maximum(node.right);
         }
     }
 
@@ -118,14 +118,14 @@ public class BST<E extends Comparable<E>> implements IBst<E> {
         if (size == 0) {
             throw new IllegalArgumentException("BST is empty!");
         }
-        return _minimum(root).e;
+        return minimum(root).e;
     }
 
-    private Node _minimum(Node node) {
+    private Node minimum(Node node) {
         if (node.left == null) {
             return root;
         } else {
-            return _minimum(node.left);
+            return minimum(node.left);
         }
     }
 
@@ -152,50 +152,52 @@ public class BST<E extends Comparable<E>> implements IBst<E> {
         while (!stack.isEmpty()) {
             Node current = stack.pop();
             System.out.print(current.e + "->");
-            if (current.right != null)
+            if (current.right != null) {
                 stack.push(current.right);
-            if (current.left != null)
+            }
+            if (current.left != null) {
                 stack.push(current.left);
+            }
         }
     }
 
     // 中序遍历
     public void centerOrder() {
-        _centerOrder(root);
+        centerOrder(root);
     }
 
-    private void _centerOrder(Node node) {
+    private void centerOrder(Node node) {
         if (node != null) {
-            _centerOrder(node.left);
+            centerOrder(node.left);
             System.out.print(node.e + "->");
-            _centerOrder(node.right);
+            centerOrder(node.right);
         }
     }
 
     // 后序遍历
     public void postOrder() {
-        _postOrder(root);
+        postOrder(root);
     }
 
-    private void _postOrder(Node node) {
+    private void postOrder(Node node) {
         if (node != null) {
-            _postOrder(node.left);
-            _postOrder(node.right);
+            postOrder(node.left);
+            postOrder(node.right);
             System.out.print(node.e + "->");
         }
     }
 
     // 前序遍历
     public void prevOrder() {
-        _prevOrder(root);
+        prevOrder(root);
     }
 
     // 递归前序遍历
-    private void _prevOrder(Node node) {
+    private void prevOrder(Node node) {
         if (node != null) {
             System.out.print(node.e + "->");
-            _prevOrder(node.left);
-            _prevOrder(node.right);
+            prevOrder(node.left);
+            prevOrder(node.right);
         }
     }
 
@@ -212,6 +214,8 @@ public class BST<E extends Comparable<E>> implements IBst<E> {
 //        }
     }
 
+    // 向以node为根的二分搜索树中插入元素e，递归算法
+    // 返回插入新节点后二分搜索树的根
     private Node add(Node node, E e) {
         if (node == null) {
             size++;
@@ -226,7 +230,11 @@ public class BST<E extends Comparable<E>> implements IBst<E> {
         return node;
     }
 
-    // 插入元素
+    /**
+     * 传统写法add
+     * @param node
+     * @param e
+     */
     private void _add(Node node, E e) {
         if (e.equals(node.e)) {
             return;

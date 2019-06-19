@@ -2,7 +2,7 @@ package mapset;
 
 import tree.BST;
 
-/*
+/**
  * BSTSet
  * @Author guobin201314@gmail.com on 2019-06-18 09:21
  */
