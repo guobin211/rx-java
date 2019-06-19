@@ -4,6 +4,7 @@ import java.util.Objects;
 
 /**
  * Student
+ *
  * @Author guobin201314@gmail.com on 2019-06-19 11:55
  */
 public class Student implements Comparable {
@@ -44,6 +45,11 @@ public class Student implements Comparable {
             return -1;
         }
         return getName().compareTo(student.getName());
+    }
+
+    @Override
+    public String toString() {
+        return "{name: \"" + getName() + "\", age: " + getAge() + "}";
     }
 
     public String getName() {
