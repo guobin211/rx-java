@@ -1,13 +1,17 @@
 package linklist;
 
-/*
+/**
  * LinkedList
- * @Author guobin201314@gmail.com on 2019-06-14 22:27
+ * @author guobin201314@gmail.com on 2019-06-14 22:27
  */
 public class LinkedList<E> {
-    // 虚拟头节点，第一个元素是dummyHead.next
+    /**
+     * 虚拟头节点，第一个元素是dummyHead.next
+     */
     private Node dummyHead;
-    // 容量length - 1 = 索引 index
+    /**
+     * 容量length - 1 = 索引 index
+     */
     private int size;
 
     public LinkedList() {
@@ -18,8 +22,9 @@ public class LinkedList<E> {
     public void removeElement(E e) {
         Node prev = dummyHead;
         while(prev.next != null){
-            if(prev.next.e.equals(e))
+            if(prev.next.e.equals(e)) {
                 break;
+            }
             prev = prev.next;
         }
 
@@ -39,7 +44,11 @@ public class LinkedList<E> {
         return delete(size - 1);
     }
 
-    // 删除元素
+    /**
+     * 删除元素
+     * @param index
+     * @return
+     */
     public E delete(int index) {
         if (index < 0 || index >= size) {
             throw new IllegalArgumentException("index must >= 0 and < size");
@@ -55,7 +64,11 @@ public class LinkedList<E> {
         return resNode.e;
     }
 
-    // 是否包含元素
+    /**
+     * 是否包含元素
+     * @param e
+     * @return
+     */
     public boolean includes(E e) {
         Node current = dummyHead.next;
         while (current != null) {

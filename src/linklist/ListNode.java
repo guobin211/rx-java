@@ -1,8 +1,8 @@
 package linklist;
 
-/*
+/**
  * ListNode
- * @Author guobin201314@gmail.com on 2019-06-15 21:10
+ * @author guobin201314@gmail.com on 2019-06-15 21:10
  */
 public class ListNode {
     int val;
