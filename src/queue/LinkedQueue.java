@@ -14,7 +14,7 @@ public class LinkedQueue<E> implements IEventQueue<E> {
         tail = null;
         size = 0;
     }
-    // 入队
+
     @Override
     public void enqueue(E e) {
         if (tail == null) {
@@ -26,7 +26,7 @@ public class LinkedQueue<E> implements IEventQueue<E> {
         }
         size++;
     }
-    // 出队
+
     @Override
     public E dequeue() {
         if (isEmpty()) {

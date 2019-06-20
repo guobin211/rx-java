@@ -1,8 +1,7 @@
 package mapset;
 
 import javax.swing.text.html.parser.Entity;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * MainMap class
@@ -25,17 +24,33 @@ public class MainMap {
         hashMap.put(11, new Student("tom", 22));
         System.out.println(hashMap.size());
         // 遍历value
-        for ( Map.Entry<Integer, Object> entry: hashMap.entrySet()) {
-            System.out.println(entry.getKey());
-            System.out.println(entry.getValue().toString());
-        }
+//        for ( Map.Entry<Integer, Object> entry: hashMap.entrySet()) {
+//            System.out.println(entry.getKey());
+//            System.out.println(entry.getValue().toString());
+//        }
         // 遍历key
-        for (Integer integer : hashMap.keySet()) {
-            System.out.println(integer);
-            System.out.println(hashMap.get(integer));
+//        for (Integer integer : hashMap.keySet()) {
+//            System.out.println(integer);
+//            System.out.println(hashMap.get(integer));
+//        }
+
+        Map<String, Integer> map = new TreeMap<>();
+        ArrayList<String> arrayList = new ArrayList<String>();
+        FileOperation.readFile("/Users/guobin/idea/rx-java/src/mapset/pride-and-prejudice.txt", arrayList);
+        System.out.println(arrayList.size());
+
+        for (String word : arrayList) {
+            if (map.containsKey(word)) {
+                int curr = map.get(word);
+                map.put(word, curr + 1);
+            } else {
+                map.put(word, 1);
+            }
         }
 
-
+        for (String key: map.keySet()) {
+            System.out.println(key+ ":" + map.get(key));
+        }
 
     }
 }

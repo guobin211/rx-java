@@ -6,12 +6,12 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
-/*
+/**
  * SyncService
- * @Author guobin201314@gmail.com on 2019-06-07 17:23
+ * @author guobin201314@gmail.com on 2019-06-07 17:23
  */
 public class SyncService {
-    public int getX() {
+    public int getx() {
         return x;
     }
 
@@ -21,7 +21,7 @@ public class SyncService {
 
     private int x;
 
-    public int getY() {
+    public int gety() {
         return y;
     }
 
@@ -40,7 +40,7 @@ public class SyncService {
         private List<SyncService> list = Collections.synchronizedList(new ArrayList<SyncService>());
 
         public synchronized SyncService getSyncService() {
-            return new SyncService(syncService.getX(), syncService.getY());
+            return new SyncService(syncService.getx(), syncService.gety());
         }
 
         protected void store(SyncService syncService) {
