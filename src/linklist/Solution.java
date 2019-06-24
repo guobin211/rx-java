@@ -9,8 +9,8 @@ public class Solution {
     public ListNode removeElements(ListNode head, int val) {
         while (head != null && head.val == val) {
               head = head.next;
-//            ListNode delNode = head;
-//            head = head.next;
+//            ListNode delNode = heap;
+//            heap = heap.next;
 //            delNode.next = null;
         }
         if (head == null) {
