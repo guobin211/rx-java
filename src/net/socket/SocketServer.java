@@ -7,7 +7,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketTimeoutException;
 
-/*
+/**
  * SocketServer
  * @Author guobin201314@gmail.com on 2019-06-05 14:52
  */
@@ -19,6 +19,7 @@ public class SocketServer extends Thread {
         serverSocket.setSoTimeout(15000);
     }
 
+    @Override
     public void run() {
         while (true) {
             try {
