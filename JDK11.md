@@ -19,6 +19,7 @@
     List
     ArrayList
     Collection
+    Vector
 
 ```
 
