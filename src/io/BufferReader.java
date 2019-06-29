@@ -15,18 +15,18 @@ public class BufferReader {
     private static final String PATH = "/Users/guobin/idea/rx-java/src/io/";
     public static void main(String[] args) throws Exception {
         // 文件通道 输出流
-        FileChannel fileChannel = new FileOutputStream(PATH + "file.txt").getChannel();
+        FileChannel fileChannel = new FileOutputStream(PATH + "socket.txt").getChannel();
         fileChannel.write(ByteBuffer.wrap("先增加的 text".getBytes()));
         fileChannel.close();
 
         // 读写通道
-        fileChannel = new RandomAccessFile(PATH + "file.txt", "rw").getChannel();
+        fileChannel = new RandomAccessFile(PATH + "socket.txt", "rw").getChannel();
         // 跳转到文件末尾
         fileChannel.position(fileChannel.size());
         fileChannel.write(ByteBuffer.wrap("最后增加的 text".getBytes()));
         fileChannel.close();
 
-        fileChannel = new FileInputStream(PATH + "file.txt").getChannel();
+        fileChannel = new FileInputStream(PATH + "socket.txt").getChannel();
         // 字节缓冲器
         ByteBuffer byteBuffer = ByteBuffer.allocate(BYTE_SIZE);
         fileChannel.read(byteBuffer);

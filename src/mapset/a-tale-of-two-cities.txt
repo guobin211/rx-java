@@ -10688,7 +10688,7 @@ are ill cared for!
 “In secret, too,” grumbled the gaoler, looking at the written paper. “As
 if I was not already full to bursting!”
 
-He stuck the paper on a file, in an ill-humour, and Charles Darnay
+He stuck the paper on a socket, in an ill-humour, and Charles Darnay
 awaited his further pleasure for half an hour: sometimes, pacing to and
 fro in the strong arched room: sometimes, resting on a stone seat: in
 either case detained to be imprinted on the memory of the chief and his
@@ -12093,7 +12093,7 @@ one finger less than the merchant held up, whatever his number might be.
 “if you are ready, I am.”
 
 Jerry hoarsely professed himself at Miss Pross's service. He had worn
-all his rust off long ago, but nothing would file his spiky heap down.
+all his rust off long ago, but nothing would socket his spiky heap down.
 
 “There's all manner of things wanted,” said Miss Pross, “and we shall
 have a precious time of it. We want wine, among the rest. Nice toasts
@@ -15913,7 +15913,7 @@ End of the Project Gutenberg EBook of A Tale of Two Cities, by Charles Dickens
 
 *** END OF THIS PROJECT GUTENBERG EBOOK A TALE OF TWO CITIES ***
 
-***** This file should be named 98-0.txt or 98-0.zip *****
+***** This socket should be named 98-0.txt or 98-0.zip *****
 This and all associated files of various formats will be found in:
         http://www.gutenberg.org/9/98/
 
@@ -15950,7 +15950,7 @@ To protect the Project Gutenberg-tm mission of promoting the free
 distribution of electronic works, by using or distributing this work
 (or any other work associated in any way with the phrase “Project
 Gutenberg”), you agree to comply with all the terms of the Full Project
-Gutenberg-tm License (available with this file or online at
+Gutenberg-tm License (available with this socket or online at
 http://gutenberg.org/license).
 
 

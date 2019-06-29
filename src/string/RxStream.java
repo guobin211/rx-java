@@ -1,8 +1,6 @@
 package string;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,7 +29,7 @@ public class RxStream {
                 }
             }
         } else {
-            System.out.println(" file ");
+            System.out.println("socket ");
         }
 
         System.out.println(city.size());

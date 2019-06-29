@@ -48,7 +48,9 @@ public class FileUtil {
         public FS(String fileName, String split) {
             // 拆分字符
             super(Arrays.asList(readFile(fileName).split(split)));
-            if (get(0).equals("")) remove(0);
+            if (get(0).equals("")) {
+                remove(0);
+            }
         }
 
         public FS(String fileName) {
@@ -71,16 +73,16 @@ public class FileUtil {
     public static void main(String[] args) {
         String path = "/Users/guobin/idea/rx-java/src/io/";
         // 读取
-        String res = FS.readFile(path + "file.txt");
+        String res = FS.readFile(path + "socket.txt");
         System.out.println(res);
         // 写入
         FS.writeFile(path + "write.txt", res);
-        FS fs = new FS(path+"file.txt", "\n");
+        FS fs = new FS(path+"socket.txt", "\n");
         fs.write(path + "test3.txt");
         System.out.println(fs);
 
         try {
-            byte[] bytesFile = FS.readBytes(new File(path + "file.txt"));
+            byte[] bytesFile = FS.readBytes(new File(path + "socket.txt"));
             System.out.println(bytesFile.length);
             for (byte b: bytesFile) {
                 System.out.println(b);

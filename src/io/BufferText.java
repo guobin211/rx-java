@@ -12,9 +12,9 @@ import java.nio.charset.Charset;
  */
 public class BufferText {
     public static void main(String[] args) {
-        String encoding = System.getProperty("file.encoding");
+        String encoding = System.getProperty("socket.encoding");
         try {
-            FileChannel fc = new FileInputStream("/Users/guobin/idea/rx-java/src/io/file.txt").getChannel();
+            FileChannel fc = new FileInputStream("/Users/guobin/idea/rx-java/src/io/socket.txt").getChannel();
             ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
             // 读到缓冲区
             fc.read(byteBuffer);

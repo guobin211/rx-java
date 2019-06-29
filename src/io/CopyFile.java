@@ -43,6 +43,6 @@ public class CopyFile {
     public static void main(String[] args) {
         String path = "/Users/guobin/idea/rx-java/src/io/";
         System.out.println("复制文件...");
-        copyTo(path + "file.txt", path + "file2.txt");
+        copyTo(path + "socket.txt", path + "file2.txt");
     }
 }

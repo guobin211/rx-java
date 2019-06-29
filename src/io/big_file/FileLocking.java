@@ -9,7 +9,7 @@ import java.nio.channels.FileChannel;
 import java.nio.channels.FileLock;
 import java.util.concurrent.TimeUnit;
 
-/*
+/**
  * FileLocking
  * @Author guobin201314@gmail.com on 2019-06-06 21:11
  */
@@ -19,7 +19,7 @@ public class FileLocking {
 
     public static void main(String[] args) throws Exception {
         // 文件映射和加锁
-        FileOutputStream fileOutputStream = new FileOutputStream("/Users/guobin/idea/rx-java/src/io/file.txt");
+        FileOutputStream fileOutputStream = new FileOutputStream("/Users/guobin/idea/rx-java/src/io/socket.txt");
         FileLock fileLock = fileOutputStream.getChannel().tryLock();
         if (fileLock != null) {
             System.out.println("读取文件");
@@ -54,6 +54,7 @@ public class FileLocking {
             start();
         }
 
+        @Override
         public void run() {
             try {
                 FileLock fl = fc.lock(start, end, false);

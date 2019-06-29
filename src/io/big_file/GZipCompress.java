@@ -6,17 +6,17 @@ import java.util.zip.CheckedOutputStream;
 import java.util.zip.GZIPOutputStream;
 import java.util.zip.ZipOutputStream;
 
-/*
+/**
  * GZipCompress
  * @Author guobin201314@gmail.com on 2019-06-06 21:41
  */
 public class GZipCompress {
     public static void main(String[] args) throws Exception {
-        String file = "/Users/guobin/idea/rx-java/src/io/file.txt";
+        String file = "/Users/guobin/idea/rx-java/src/io/socket.txt";
 
         BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
         BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(new GZIPOutputStream(
-                new FileOutputStream("/Users/guobin/idea/rx-java/src/io/big_file/file.gz")
+                new FileOutputStream("/Users/guobin/idea/rx-java/src/io/big_file/socket.gz")
         ));
         System.out.println("开始压缩文件");
         int c;

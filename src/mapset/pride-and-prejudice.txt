@@ -13068,7 +13068,7 @@ End of the Project Gutenberg EBook of Pride and Prejudice, by Jane Austen
 
 *** END OF THIS PROJECT GUTENBERG EBOOK PRIDE AND PREJUDICE ***
 
-***** This file should be named 1342-0.txt or 1342-0.zip *****
+***** This socket should be named 1342-0.txt or 1342-0.zip *****
 This and all associated files of various formats will be found in:
         http://www.gutenberg.org/1/3/4/1342/
 
@@ -13105,7 +13105,7 @@ To protect the Project Gutenberg-tm mission of promoting the free
 distribution of electronic works, by using or distributing this work
 (or any other work associated in any way with the phrase “Project
 Gutenberg”), you agree to comply with all the terms of the Full Project
-Gutenberg-tm License (available with this file or online at
+Gutenberg-tm License (available with this socket or online at
 http://gutenberg.org/license).
 
 

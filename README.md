@@ -6,6 +6,19 @@ design your code
 > this project for java
 > also for other language
 
+### 基本数据结构
+
+```bash
+   链表
+       单链表,双链表
+   树
+       二叉树,线段树
+   集合
+       Map,Set,Array
+   堆 + 栈 + 队列
+```
+
+
 ```bash
 
     libs
@@ -38,38 +51,7 @@ design your code
 [![queue-stack](https://github.com/guobin211/rx-java/blob/master/design/queue.png)](https://github.com/guobin211/rx-java)
 
 
-### package
-
-```bash
-
-    array
-    bank
-    basic
-    collection
-    computed
-    datetime
-    dip
-    io
-    isp
-    lambda
-    linked
-    logic
-    math
-    metadata
-    makeModel
-    onject
-    observerMode
-    queue
-    recursion
-    stack
-    stream
-    strcture
-    types
-    windstep
-    
-```
-
-### array
+### about array
     
 ```bash
 
@@ -81,7 +63,7 @@ design your code
     
 ```
     
-### collection
+### about collection
 
 ```bash
     map
@@ -93,7 +75,7 @@ design your code
 
 ```
 
-### lambda
+### about lambda
 
 ```
     function interface

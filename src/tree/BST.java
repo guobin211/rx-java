@@ -295,9 +295,7 @@ public class BST<E extends Comparable<E>> implements IBst<E> {
 
     private String buildDepthString(int depth) {
         StringBuilder res = new StringBuilder();
-        for (int i = 0; i < depth; i++) {
-            res.append("--");
-        }
+        res.append("--".repeat(Math.max(0, depth)));
         return res.toString();
     }
 
