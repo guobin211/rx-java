@@ -60,7 +60,6 @@ public class ArrayQueue<E> implements IEventQueue<E> {
         res.append("] tail");
         return res.toString();
     }
-
     public static void main(String[] args) {
         LoopQueue<Integer> loopQueue = new LoopQueue<>();
         for (int i = 0; i < 10; i++) {

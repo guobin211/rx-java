@@ -1,13 +1,13 @@
-/*
- * io FileUtil
- * @author GuoBin211 on 2019-06-03 22:12
- */
 package io;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/**
+ * FileUtil FileUtil
+ * @author GuoBin211 on 2019-06-03 22:12
+ */
 public class FileUtil {
     public static class FS extends ArrayList<String> {
         static String readFile(String fileName) {

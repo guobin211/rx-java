@@ -11,22 +11,22 @@ package union;
 public interface UnionFind {
     /**
      * size
-     * @return
+     * @return size
      */
     int getSize();
 
     /**
      * 是否相连
-     * @param p
-     * @param q
-     * @return
+     * @param p int
+     * @param q int
+     * @return bool
      */
     boolean isConnected(int p, int q);
 
     /**
      * 合并元素
-     * @param p
-     * @param q
+     * @param p int
+     * @param q int
      */
     void unionElements(int p, int q);
 }
