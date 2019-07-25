@@ -2,7 +2,6 @@ package socket;
 
 import java.io.IOException;
 
-
 /**
  * Server class
  *

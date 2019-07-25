@@ -3,7 +3,6 @@ package socket;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketAddress;
@@ -47,7 +46,7 @@ public class SocketServer extends Thread {
 
     /**
      * 连线
-     * @param socket
+     * @param socket 客户端
      */
     private void handleOnline(Socket socket) {
         this.sockets.put(socket.getRemoteSocketAddress(), socket);
@@ -56,13 +55,13 @@ public class SocketServer extends Thread {
     /**
      * 离线
      */
-    private void handleLive() {
+    private void handleLeave() {
 
     }
 
     /**
      * 发送消息
-     * @param msg
+     * @param msg string
      */
     public void sendMessage(String msg) {
         for (Socket socket: sockets.values()) {
