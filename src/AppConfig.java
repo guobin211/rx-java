@@ -4,6 +4,5 @@
  */
 public class AppConfig {
     public static final String PATH = "/Users/guobin/idea/rx-java/src/";
-    public AppConfig() {}
 }
 

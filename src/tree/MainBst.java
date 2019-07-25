@@ -21,7 +21,7 @@ public class MainBst {
         System.out.println("\n层序遍历");
         bst.postOrderQueue();
         bst.removeMax();
-//        bst.prevOrderStack();
-//        System.out.println(bst);
+        bst.prevOrderStack();
+        System.out.println(bst);
     }
 }
