@@ -1,14 +1,18 @@
 package array;
 
-/*
+/**
  * JsArray
- * @Author guobin201314@gmail.com on 2019-06-12 22:42
+ * @author guobin201314@gmail.com on 2019-06-12 22:42
  */
 public class JsArray<E> implements IJsArray<E> {
 
     private E[] data;
-    // 已存储
+    /**
+     * length
+     */
     private int length;
+
+    private final static int DEFAULT_LENGTH = 10;
 
     int getLength() {
         return length;
@@ -17,9 +21,9 @@ public class JsArray<E> implements IJsArray<E> {
     public JsArray() {
         this(10);
     }
-
+    @SuppressWarnings("unchecked")
     public JsArray(int capacity) {
-        if (capacity < 10) {
+        if (capacity < DEFAULT_LENGTH) {
             capacity = 10;
         }
         data = (E[]) new Object[capacity];
@@ -57,13 +61,14 @@ public class JsArray<E> implements IJsArray<E> {
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public void push(E e) {
 
         if (length == data.length - 1) {
             int size = length * 2;
             E[] arr = (E[]) new Object[size];
-            for (int i = 0; i < length; i++) {
-                arr[i] = data[i];
+            if (length >= 0) {
+                System.arraycopy(data, 0, arr, 0, length);
             }
             arr[length] = e;
             length++;
@@ -94,6 +99,7 @@ public class JsArray<E> implements IJsArray<E> {
         return temp;
     }
 
+    @SuppressWarnings("unchecked")
     public void add(int index, E e) {
         if (index < 0 || index > length) {
             throw new IllegalArgumentException("index must >= 0 and < length");
