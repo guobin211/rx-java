@@ -8,7 +8,6 @@ import java.util.Vector;
  * MainHeap class
  *
  * @author GuoBin
- * @email guobin201314@gmail.com
  * @date 2019-06-20
  */
 public class MainHeap {

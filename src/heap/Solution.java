@@ -6,7 +6,6 @@ import java.util.*;
  * Solution class
  *
  * @author GuoBin
- * @email guobin201314@gmail.com
  * @date 2019-06-22
  */
 public class Solution {
@@ -35,7 +34,7 @@ public class Solution {
      *
      * @param nums list
      * @param k    要保留的长度
-     * @return
+     * @return list
      */
     public List<Integer> topFrequent(int[] nums, int k) {
         TreeMap<Integer, Integer> map = new TreeMap<>();

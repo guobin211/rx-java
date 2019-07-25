@@ -8,7 +8,6 @@ import java.util.Queue;
  * 基于最大堆的优先级队列
  *
  * @author GuoBin
- * @email guobin201314@gmail.com
  * @date 2019-06-23
  */
 public class MyPriorityQueue<E extends Comparable<E>> implements IEventQueue<E> {

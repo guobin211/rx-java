@@ -10,7 +10,6 @@ import java.util.Vector;
  * 堆的实现基于动态数组
  *
  * @author GuoBin
- * @email guobin201314@gmail.com
  * @date 2019-06-20
  */
 public class MaxHeap<E extends Comparable<E>> {
@@ -28,7 +27,7 @@ public class MaxHeap<E extends Comparable<E>> {
     /**
      * 取出最大值
      *
-     * @return
+     * @return e
      */
     public E extractMax() {
         E res = findMax();
@@ -41,7 +40,7 @@ public class MaxHeap<E extends Comparable<E>> {
     /**
      * 下沉操作
      *
-     * @param k
+     * @param k int
      */
     private void siftDown(int k) {
         while (leftChild(k) < data.size()) {
@@ -75,7 +74,7 @@ public class MaxHeap<E extends Comparable<E>> {
      * 添加元素
      * 堆的上浮
      *
-     * @param e
+     * @param e element
      */
     public void add(E e) {
         data.add(e);
@@ -85,7 +84,7 @@ public class MaxHeap<E extends Comparable<E>> {
     /**
      * 上浮
      *
-     * @param k
+     * @param k key
      */
     private void siftUp(int k) {
         while (k > 0 && data.get(parent(k)).compareTo(data.get(k)) < 0) {
@@ -100,8 +99,8 @@ public class MaxHeap<E extends Comparable<E>> {
     /**
      * 当前索引的父节点
      *
-     * @param index
-     * @return
+     * @param index int
+     * @return int
      */
     private int parent(int index) {
         if (index == 0) {
@@ -113,8 +112,8 @@ public class MaxHeap<E extends Comparable<E>> {
     /**
      * 当前索引的左子节点
      *
-     * @param index
-     * @return
+     * @param index int
+     * @return int
      */
     private int leftChild(int index) {
         return index * 2 + 1;
@@ -123,8 +122,8 @@ public class MaxHeap<E extends Comparable<E>> {
     /**
      * 当前索引的右子节点
      *
-     * @param index
-     * @return
+     * @param index int
+     * @return int
      */
     private int rightChild(int index) {
         return index * 2 + 2;
