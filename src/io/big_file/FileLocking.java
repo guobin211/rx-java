@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * FileLocking
- * @Author guobin201314@gmail.com on 2019-06-06 21:11
+ * @author guobin201314@gmail.com on 2019-06-06 21:11
  */
 public class FileLocking {
     private static FileChannel fc;

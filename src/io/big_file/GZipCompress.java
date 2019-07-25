@@ -8,7 +8,7 @@ import java.util.zip.ZipOutputStream;
 
 /**
  * GZipCompress
- * @Author guobin201314@gmail.com on 2019-06-06 21:41
+ * @author guobin201314@gmail.com on 2019-06-06 21:41
  */
 public class GZipCompress {
     public static void main(String[] args) throws Exception {
@@ -42,7 +42,7 @@ public class GZipCompress {
             bufferedOutputStream.write(c);
         }
         bufferedReader.close();
-//        fileOutputStream.flush();
+        // fileOutputStream.flush();
         bufferedOutputStream.close();
         fileOutputStream.close();
     }

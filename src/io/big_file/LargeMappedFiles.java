@@ -12,7 +12,7 @@ import java.nio.charset.Charset;
 
 /**
  * LargeMappedFiles
- * @Author guobin201314@gmail.com on 2019-06-06 20:26
+ * @author guobin201314@gmail.com on 2019-06-06 20:26
  */
 public class LargeMappedFiles {
     /**

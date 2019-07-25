@@ -40,7 +40,8 @@ public class FileUtil {
         static byte[] readBytes(File file) throws IOException {
             try (BufferedInputStream bufferedInputStream = new BufferedInputStream(new FileInputStream(file))) {
                 byte[] data = new byte[bufferedInputStream.available()];
-                bufferedInputStream.read(data);
+                int read = bufferedInputStream.read(data);
+                System.out.println(read);
                 return data;
             }
         }
