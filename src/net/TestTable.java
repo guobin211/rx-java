@@ -14,6 +14,7 @@ public class TestTable {
     }
     @NetTest(id = 1)
     public static void testExe() {
+        System.out.println();
         getMethods();
     }
 }

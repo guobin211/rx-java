@@ -230,11 +230,6 @@ public class BST<E extends Comparable<E>> implements IBst<E> {
         return node;
     }
 
-    /**
-     * 传统写法add
-     * @param node
-     * @param e
-     */
     private void _add(Node node, E e) {
         if (e.equals(node.e)) {
             return;
@@ -294,9 +289,7 @@ public class BST<E extends Comparable<E>> implements IBst<E> {
     }
 
     private String buildDepthString(int depth) {
-        StringBuilder res = new StringBuilder();
-        res.append("--".repeat(Math.max(0, depth)));
-        return res.toString();
+        return "--".repeat(Math.max(0, depth));
     }
 
     public int getSize() {
