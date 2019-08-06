@@ -41,9 +41,7 @@ public class LinkedStack<E> implements IEventStack<E> {
 
     @Override
     public String toString() {
-        StringBuilder res = new StringBuilder();
-        res.append("Stack: top").append(list);
-        return res.toString();
+        return "Stack: top" + list;
     }
 
     public static void main(String[] args) {
