@@ -8,6 +8,7 @@ import java.util.Stack;
  * 二分搜索树
  *        node
  *  left小    right大
+ * @author guobin
  * @param <E>
  */
 public class BST<E extends Comparable<E>> implements IBst<E> {
@@ -23,7 +24,13 @@ public class BST<E extends Comparable<E>> implements IBst<E> {
     public void remove(E e) {
         root = remove(root, e);
     }
-    // 删除节点
+
+    /**
+     * 删除节点
+     * @param node Node
+     * @param e element
+     * @return New Node
+     */
     private Node remove(Node node, E e) {
         if (node == null) {
             return null;
@@ -59,11 +66,12 @@ public class BST<E extends Comparable<E>> implements IBst<E> {
         return node;
     }
 
-    // 删除最大值
-    public E removeMax() {
+    /**
+     * 删除最大节点
+     */
+    void removeMax() {
         E res = maximum();
         root = removeMax(root);
-        return res;
     }
 
     private Node removeMax(Node node) {
@@ -78,13 +86,21 @@ public class BST<E extends Comparable<E>> implements IBst<E> {
         return node;
     }
 
-    // 删除最小节点
+    /**
+     * 移除min
+     * @return e
+     */
     public E removeMin() {
         E res = minimum();
         root = removeMin(root);
         return res;
     }
-    // 删除节点，返回新的node
+
+    /**
+     * 移除节点
+     * @param node e
+     * @return Node
+     */
     private Node removeMin(Node node) {
         if (node.left == null) {
             Node rightNode = node.right;
@@ -97,7 +113,6 @@ public class BST<E extends Comparable<E>> implements IBst<E> {
         return node;
     }
 
-    // 最大值
     public E maximum() {
         if (size == 0) {
             throw new IllegalArgumentException("BST is empty!");
@@ -113,8 +128,7 @@ public class BST<E extends Comparable<E>> implements IBst<E> {
         }
     }
 
-    // 取最小值
-    public E minimum() {
+    private E minimum() {
         if (size == 0) {
             throw new IllegalArgumentException("BST is empty!");
         }
@@ -129,8 +143,10 @@ public class BST<E extends Comparable<E>> implements IBst<E> {
         }
     }
 
-    // 层序遍历 非递归 队列遍历
-    public void postOrderQueue() {
+    /**
+     * 层序遍历 非递归 队列遍历
+     */
+    void postOrderQueue() {
         Queue<Node> queue = new LinkedList<>();
         queue.add(root);
         while (!queue.isEmpty()) {
@@ -145,8 +161,10 @@ public class BST<E extends Comparable<E>> implements IBst<E> {
         }
     }
 
-    // 前序遍历 非递归 栈遍历
-    public void prevOrderStack() {
+    /**
+     *  前序遍历 非递归 栈遍历
+     */
+    void prevOrderStack() {
         Stack<Node> stack = new Stack<>();
         stack.push(root);
         while (!stack.isEmpty()) {
@@ -161,8 +179,10 @@ public class BST<E extends Comparable<E>> implements IBst<E> {
         }
     }
 
-    // 中序遍历
-    public void centerOrder() {
+    /**
+     * 中序遍历
+     */
+    void centerOrder() {
         centerOrder(root);
     }
 
@@ -174,8 +194,10 @@ public class BST<E extends Comparable<E>> implements IBst<E> {
         }
     }
 
-    // 后序遍历
-    public void postOrder() {
+    /**
+     * 后序遍历
+     */
+    void postOrder() {
         postOrder(root);
     }
 
@@ -187,12 +209,17 @@ public class BST<E extends Comparable<E>> implements IBst<E> {
         }
     }
 
-    // 前序遍历
-    public void prevOrder() {
+    /**
+     * 前序遍历
+     */
+    void prevOrder() {
         prevOrder(root);
     }
 
-    // 递归前序遍历
+    /**
+     * 递归前序遍历
+     * @param node Node
+     */
     private void prevOrder(Node node) {
         if (node != null) {
             System.out.print(node.e + "->");
@@ -215,7 +242,13 @@ public class BST<E extends Comparable<E>> implements IBst<E> {
     }
 
     // 向以node为根的二分搜索树中插入元素e，递归算法
-    // 返回插入新节点后二分搜索树的根
+
+    /**
+     * 返回插入新节点后二分搜索树的根
+     * @param node Node
+     * @param e e
+     * @return Node
+     */
     private Node add(Node node, E e) {
         if (node == null) {
             size++;
@@ -304,7 +337,7 @@ public class BST<E extends Comparable<E>> implements IBst<E> {
         public E e;
         public Node left, right;
 
-        public Node(E e) {
+        Node(E e) {
             this.e = e;
             left = null;
             right = null;

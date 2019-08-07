@@ -22,8 +22,8 @@ public class Trie {
 
     /**
      * 检测是否包含
-     * @param word
-     * @return
+     * @param word string
+     * @return bool
      */
     public boolean contains(String word) {
         Node curr = root;
@@ -40,7 +40,7 @@ public class Trie {
 
     /**
      * 添加新单词
-     * @param word
+     * @param word string
      */
     public void add(String word) {
         Node curr = root;
@@ -62,16 +62,16 @@ public class Trie {
         return size;
     }
 
-    private class Node {
-        public boolean isWord;
+    private static class Node {
+        boolean isWord;
         public TreeMap<Character, Node> next;
 
-        public Node(boolean isWord) {
+        Node(boolean isWord) {
             this.isWord = isWord;
             next = new TreeMap<>();
         }
 
-        public Node() {
+        Node() {
             this(false);
         }
     }
