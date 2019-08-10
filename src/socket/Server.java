@@ -15,8 +15,8 @@ public class Server {
         SocketServer socketServer;
         try {
             socketServer = new SocketServer(12011);
-            socketServer.run();
-//            socketServer.sendMessage("推送消息");
+            socketServer.start();
+            // socketServer.sendMessage("推送消息");
         } catch (IOException e) {
             e.printStackTrace();
         }

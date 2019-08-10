@@ -1,8 +1,8 @@
 package linklist;
 
-/*
+/**
  * DoubleLinkedList
- * @Author guobin201314@gmail.com on 2019-06-16 21:46
+ * @author guobin201314@gmail.com on 2019-06-16 21:46
  */
 public class DoubleLinkedList<E> {
 

@@ -10,9 +10,20 @@ import java.util.function.Function;
 
 @FunctionalInterface
 interface ISumOfNumber {
-    // 需要自己实现的方法
+    /**
+     * 需要自己实现的方法
+     * @param a int
+     * @param b int
+     * @return int
+     */
     int addNumber(int a, int b);
-    // 默认实现的方法
+
+    /**
+     * 默认实现的方法
+     * @param x int
+     * @param y int
+     * @return int
+     */
     default int delete(int x, int y) {
         return x - y;
     }
@@ -23,12 +34,19 @@ class Money {
     Money(int money) {
         this.money = money;
     }
-    // logMoney函数接受一个实现了函数接口的函数
+
+    /**
+     *  logMoney函数接受一个实现了函数接口的函数
+     * @param formatMoney fn
+     */
     void logMoney(Function<Integer, String> formatMoney) {
         System.out.println("Money is:" + formatMoney.apply(this.money));
     }
 }
 
+/**
+ * @author guobin
+ */
 public class HelpThread {
     private static Runnable runnable = () -> System.out.println("属性尖头函数");
 
