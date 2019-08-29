@@ -62,3 +62,8 @@ src/io/file2.txt
 
 rx-java.iml
 *.class
+.gradle
+gradle
+kotlin-app/.gradle/
+kotlin-app/gradle/
+kotlin-app/build/
