@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':kot'
 rootProject.name='rx'

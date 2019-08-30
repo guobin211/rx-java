@@ -13,7 +13,7 @@ class ListViewActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_view)
-        val listView: ListView = findViewById(R.id.list_view)
+        val listView: ListView = this.findViewById(R.id.list_view)
         val adapter: ArrayAdapter<String> = getAdapter(this, getArrayString(36))
         listView.adapter = adapter
     }
