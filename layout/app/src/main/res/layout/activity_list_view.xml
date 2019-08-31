@@ -4,9 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.ListView">
+    tools:context=".activity.ListViewActivity">
 
     <ListView
+        android:id="@+id/list_view_demo"
+        android:divider="@color/colorPrimary"
+        android:dividerHeight="1px"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"

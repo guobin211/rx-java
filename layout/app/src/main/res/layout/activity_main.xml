@@ -22,4 +22,22 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="2dp"
         android:text="Layout" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="adapter" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="base-adapter" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="grid-view" />
 </LinearLayout>
