@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".activity.LinerLayout"></activity>
+        <activity android:name=".activity.GridViewActivity"></activity>
+        <activity android:name=".activity.BaseAdapterActivity" />
+        <activity android:name=".activity.SimpleAdapterActivity" />
+        <activity android:name=".activity.LinerLayout" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,7 +24,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.ListView"
+            android:name=".activity.ListViewActivity"
             android:launchMode="singleTask">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
