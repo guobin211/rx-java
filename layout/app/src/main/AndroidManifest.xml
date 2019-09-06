@@ -12,17 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".activity.GridViewActivity"></activity>
-        <activity android:name=".activity.BaseAdapterActivity" />
-        <activity android:name=".activity.SimpleAdapterActivity" />
-        <activity android:name=".activity.LinerLayout" />
         <activity android:name=".MainActivity">
             <intent-filter>
+                <!--主activity-->
                 <action android:name="android.intent.action.MAIN" />
-
+                <!--启动界面-->
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--启动模式-->
         <activity
             android:name=".activity.ListViewActivity"
             android:launchMode="singleTask">
@@ -30,6 +28,18 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.GridViewActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.BaseAdapterActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.SimpleAdapterActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.LinerLayout"
+            android:launchMode="singleTask" />
     </application>
 
 </manifest>
