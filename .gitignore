@@ -67,3 +67,5 @@ gradle
 kotlin-app/.gradle/
 kotlin-app/gradle/
 kotlin-app/build/
+.vscode
+.idea
