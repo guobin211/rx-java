@@ -56,5 +56,8 @@ public class SelfListItem extends LinearLayout {
         if (right != null) {
             contentText.setText(right);
         }
+        if (image != null) {
+            imageView.setImageResource(R.drawable.ic_launcher_background);
+        }
     }
 }
