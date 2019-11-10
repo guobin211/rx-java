@@ -52,9 +52,14 @@ open class Shape {
 class Rectangle : Shape() {
     // 类内部的对象声明可以用 companion 关键字标记
     companion object Factory {
+        val singleRectangle = Rectangle()
         fun create(): Rectangle = Rectangle()
     }
     override val vertexCount = 4
+
+    fun getInstance(): Rectangle {
+        return Factory.singleRectangle
+    }
 }
 
 fun main() {

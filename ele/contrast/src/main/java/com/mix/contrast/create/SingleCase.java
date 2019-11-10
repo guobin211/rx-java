@@ -1,11 +1,8 @@
 package com.mix.contrast.create;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.concurrent.ExecutorService;
-import java.util.concurrent.LinkedBlockingDeque;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.Executors;
+
 
 /**
  * @author guobin211
@@ -31,14 +28,26 @@ public class SingleCase {
     }
 
     public static void main(String[] args) {
-        // 创建线程池
-        ExecutorService pool = new ThreadPoolExecutor(
-                5,
-                200,
-                0L,
-                TimeUnit.MILLISECONDS,
-                new LinkedBlockingDeque<Runnable>(1024),
-                new ThreadPoolExecutor.AbortPolicy());
+        int poolSize = 10;
+        ExecutorService executorService = Executors.newFixedThreadPool(5);
+        for (int i = 0; i < poolSize; i++) {
+            executorService.execute(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        SingleTon singleTon  = SingleTon.getInstance();
+                        System.out.println(singleTon.getData());
+                        singleTon.addData(1);
+                        Thread.sleep(100);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
+            if (i == poolSize - 1) {
+                executorService.shutdown();
+            }
+        }
 
         for (int i = 0; i < MAX; i++) {
             pool.execute(new Runnable() {
