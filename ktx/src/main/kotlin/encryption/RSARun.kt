@@ -1,12 +1,13 @@
 package encryption
 
 import java.io.ByteArrayOutputStream
-import java.security.KeyPair
-import java.security.KeyPairGenerator
-import java.security.PrivateKey
-import java.security.PublicKey
+import java.security.*
+import java.security.spec.KeySpec
+import java.security.spec.PKCS8EncodedKeySpec
+import java.security.spec.X509EncodedKeySpec
 import java.util.*
 import javax.crypto.Cipher
+import javax.crypto.interfaces.PBEKey
 
 /**
  * RSARun
@@ -36,7 +37,10 @@ object RSARun {
     fun getRsaKey(): KeyPair {
         val keyPairGenerator = KeyPairGenerator.getInstance(TRANSFORM_MODE)
         val keyPair = keyPairGenerator.genKeyPair()
+        println("publicKey:")
         println(Base64.getEncoder().encodeToString(keyPair.public.encoded))
+        println("privateKey:")
+        println(Base64.getEncoder().encodeToString(keyPair.private.encoded))
         return keyPair
     }
 
@@ -97,4 +101,14 @@ fun main() {
     val encode = RSARun.encryptByPrivateKey(value, rsaKey.private)
     println(encode)
     println(RSARun.decryptByPublicKey(encode, rsaKey.public))
+    // 字符串转key对象
+    val keyStr = Base64.getEncoder().encodeToString(rsaKey.private.encoded)
+    val privateKey: PrivateKey = KeyFactory.getInstance("RSA")
+        .generatePrivate(PKCS8EncodedKeySpec(Base64.getDecoder().decode(keyStr)))
+    println(privateKey)
+
+    val publicStr = Base64.getEncoder().encodeToString(rsaKey.public.encoded)
+    val publicKey: PublicKey = KeyFactory.getInstance("RSA")
+        .generatePublic(X509EncodedKeySpec(Base64.getDecoder().decode(publicStr)))
+    println(publicKey)
 }
