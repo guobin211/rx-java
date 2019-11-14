@@ -1,3 +1,5 @@
+package basic
+
 import kotlin.random.Random
 
 /**

@@ -1,3 +1,5 @@
+package basic
+
 /**
  *
  * @author guobin211
@@ -8,7 +10,7 @@
 class ThisRun {
     inner class B{
         fun Int.foo() {
-            // ThisRun 的 this
+            // basic.ThisRun 的 this
             val a = this@ThisRun
             // B 的 this
             val b = this@B

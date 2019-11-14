@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "mix"
-version = "0.0.1"
+version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()

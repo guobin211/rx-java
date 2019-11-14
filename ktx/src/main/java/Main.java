@@ -1,7 +1,7 @@
 import model.Person;
 
 /**
- * PACKAGE_NAME
+ * Main
  * tool
  *
  * @author guobin211

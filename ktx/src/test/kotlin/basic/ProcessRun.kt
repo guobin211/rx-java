@@ -1,3 +1,5 @@
+package basic
+
 import java.lang.management.ManagementFactory
 
 /**
