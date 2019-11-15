@@ -72,3 +72,7 @@ kotlin-app/build/
 build
 dist
 target
+*.iml
+*.bat
+.settings
+.idea
