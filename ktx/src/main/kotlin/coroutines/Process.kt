@@ -13,5 +13,7 @@ import java.lang.management.ManagementFactory
 
 fun main() {
     val process = ManagementFactory.getRuntimeMXBean()
+    val thread = Thread.currentThread()
     println(process.name)
+    println(thread.name)
 }

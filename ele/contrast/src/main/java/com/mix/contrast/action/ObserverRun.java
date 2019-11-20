@@ -3,8 +3,6 @@ package com.mix.contrast.action;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.jws.Oneway;
-
 interface Observer {
     /**
      * update
