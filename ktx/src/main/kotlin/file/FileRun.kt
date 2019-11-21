@@ -24,12 +24,38 @@ object FileRun {
         return File("").canonicalPath + "/resources"
     }
 
-    fun readFile(fileName: String) {
-
+    /**
+     * 获取路径下的文件夹和文件
+     */
+    fun readPath(path: String): FilePath {
+        val fileTreeWalk: FileTreeWalk = File("/").walk()
+        val dirs = mutableListOf<String>()
+        val files = mutableListOf<String>()
+        fileTreeWalk.maxDepth(1).forEach {
+            if (it.isDirectory) {
+                dirs.add(it.absolutePath)
+            } else {
+                files.add(it.absolutePath)
+            }
+        }
+        return FilePath(files, dirs)
     }
 }
+
+data class FilePath(val files: List<String>, val dirs: List<String>) {}
 
 fun main() {
     println(FileRun.getDirname())
     println(FileRun.getResources())
+    val filePath = FileRun.readPath("/")
+    val dirs = filePath.dirs
+    val files = filePath.files
+
+    files.forEach{
+        println(it)
+    }
+
+    dirs.forEach{
+        println(it)
+    }
 }
