@@ -13,5 +13,7 @@ public class Main {
         System.out.println("Hello Gradle");
         Person person = new Person("jack", 22);
         System.out.println(person);
+        person.setName("tom");
+        System.out.println(person);
     }
 }
