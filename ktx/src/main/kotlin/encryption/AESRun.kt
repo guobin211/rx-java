@@ -22,7 +22,7 @@ object AESRun {
     fun encrypt(s: String): String {
         val cipher = Cipher.getInstance("AES")
         // 秘钥
-        val key: SecretKey = SecretKeySpec(PASSWORD.toByteArray(), "AES")
+        val key: SecretKey = SecretKeySpec(PASSWORD.toByteArray(), "AES") as SecretKey
         // 加密模式
         cipher.init(Cipher.ENCRYPT_MODE, key)
         return Base64.getEncoder().encodeToString(cipher.doFinal(s.toByteArray()))
