@@ -18,6 +18,9 @@ import com.guobin.layout.activity.ListViewActivity;
 import com.guobin.layout.activity.SimpleAdapterActivity;
 
 
+/**
+ * @author guobin
+ */
 public class MainActivity extends AppCompatActivity {
 
     Button btn1;
@@ -25,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     Button btn3;
     Button btn4;
     Button btn5;
+    Button btn6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
         btn4.setOnClickListener(this.onListViewClick(4));
         btn5 = findViewById(R.id.button5);
         btn5.setOnClickListener(this.onListViewClick(5));
+        btn6 = findViewById(R.id.button6);
+        btn6.setOnClickListener(this.onListViewClick(6));
     }
 
     @Override
@@ -52,9 +58,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         String title = (String) item.getTitle();
-        if (title.equals("listview")) {
+        if ("listview".equals(title)) {
             Toast.makeText(this, "用户点击了" + title, Toast.LENGTH_SHORT).show();
-        } else if (title.equals("linerlayout")) {
+        } else if ("linerlayout".equals(title)) {
             Toast.makeText(this, "用户点击了" + title, Toast.LENGTH_SHORT).show();
         }
         return super.onOptionsItemSelected(item);
@@ -75,6 +81,9 @@ public class MainActivity extends AppCompatActivity {
                     intent.setClass(MainActivity.this, BaseAdapterActivity.class);
                 } else if (id == 5) {
                     intent.setClass(MainActivity.this, GridViewActivity.class);
+                } else if (id == 6) {
+                    // 自定义控件
+                    intent.setClass(MainActivity.this, ListViewActivity.class);
                 } else {
                     intent.setClass(MainActivity.this, ListViewActivity.class);
                 }

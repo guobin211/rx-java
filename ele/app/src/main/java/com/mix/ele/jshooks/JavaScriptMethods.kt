@@ -65,7 +65,7 @@ class JavaScriptMethods(ctx: Context, web: WebView) {
     * 拨号功能
     * */
     var callPhone = { phone: String ->
-        val intent = Intent()
+        val intent: Intent = Intent()
         intent.action = "android.intent.action.VIEW"
         intent.action = "android.intent.action.DIAL"
         intent.addCategory("android.intent.category.DEFAULT")
