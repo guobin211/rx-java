@@ -25,11 +25,11 @@ object RSARun {
     /**
      * 分段加密 117字节
      */
-    private const val ENCRPY_MAX_SIZE = 117
+    private const val ENCODE_MAX_SIZE = 117
     /**
      * 分段解密 256字节
      */
-    private const val DECRRPT_MAX_SIZE = 256
+    private const val DECODE_MAX_SIZE = 256
 
     /**
      * 生成秘钥对
@@ -56,9 +56,9 @@ object RSARun {
         var offset = 0
         val os = ByteArrayOutputStream()
         while (byteArray.size - offset > 0) {
-            if (byteArray.size - offset >= ENCRPY_MAX_SIZE) {
-                temp = cipher.doFinal(byteArray, offset, ENCRPY_MAX_SIZE)
-                offset += ENCRPY_MAX_SIZE
+            if (byteArray.size - offset >= ENCODE_MAX_SIZE) {
+                temp = cipher.doFinal(byteArray, offset, ENCODE_MAX_SIZE)
+                offset += ENCODE_MAX_SIZE
             } else {
                 temp = cipher.doFinal(byteArray, offset, byteArray.size - offset)
                 offset = byteArray.size
@@ -80,9 +80,9 @@ object RSARun {
         var offset = 0
         val os = ByteArrayOutputStream()
         while (byteArray.size - offset > 0) {
-            if (byteArray.size - offset >= DECRRPT_MAX_SIZE) {
-                temp = cipher.doFinal(byteArray, offset, DECRRPT_MAX_SIZE)
-                offset += DECRRPT_MAX_SIZE
+            if (byteArray.size - offset >= DECODE_MAX_SIZE) {
+                temp = cipher.doFinal(byteArray, offset, DECODE_MAX_SIZE)
+                offset += DECODE_MAX_SIZE
             } else {
                 temp = cipher.doFinal(byteArray, offset, byteArray.size - offset)
                 offset = byteArray.size
