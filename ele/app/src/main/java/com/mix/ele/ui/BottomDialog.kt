@@ -15,10 +15,12 @@ class BottomDialog: Dialog {
 
     constructor(context: Context) : this(context, 0)
 
+    // 添加自定义样式 R.style.btm_dialog
     constructor(context: Context, themeResId: Int): super(context, R.style.btm_dialog) {
         setContentView(R.layout.dialog_view)
         // 设置显示位置
         window?.setGravity(Gravity.BOTTOM)
+        // 设置宽高
         window?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
     }
 
