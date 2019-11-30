@@ -26,6 +26,18 @@ class JavaScriptMethods(ctx: Context, web: WebView) {
         BottomDialog(ctx)
     }
 
+    @JavascriptInterface
+    fun sendMessage(json: String): Unit {
+        val jsJson = JSONObject(json)
+        val phone = jsJson.get("phone")
+        // 空安全操作
+        val msg: String = jsJson.get("msg") as String ?: "empty message"
+        println(msg)
+        Toast.makeText(ctx, msg + phone, Toast.LENGTH_SHORT).show()
+        // 发送短信息
+        val intent = Intent()
+    }
+
     /**
      * H5调用kotlin方法
      */

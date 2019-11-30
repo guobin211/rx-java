@@ -1,69 +1,84 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>web-view</title>
 </head>
+
 <body>
-<div id="app">
-    <div class="content">
-        <button type="button" id="js-call">js call kotlin</button>
+    <div id="app">
+        <div class="content">
+            <button type="button" id="js-call">js call kotlin</button>
 
-        <button type="button" id="kotlin-call">kotlin callback</button>
+            <button type="button" id="kotlin-call">kotlin callback</button>
 
-        <button type="button" id="open-call">打电话</button>
+            <button type="button" id="open-call">打电话</button>
 
-        <div class="log">
-            <p>app: logs...</p>
+            <button type="button" id="msg-call">发短信</button>
+
+            <div class="log">
+                <p>app: logs...</p>
+            </div>
         </div>
     </div>
-</div>
-<!-- built files will be auto injected -->
-<script type="text/javascript">
-    var logsEl = document.getElementsByClassName('log')[0]
+    <!-- built files will be auto injected -->
+    <script type="text/javascript">
+        var logsEl = document.getElementsByClassName('log')[0]
 
-    var showMessage = function (json) {
-        log(JSON.stringify(json))
-    }
+        var showMessage = function (json) {
+            log(JSON.stringify(json))
+        }
 
-    var kotlinCallback = function(json) {
-        log(JSON.stringify(json))
-    }
+        var kotlinCallback = function (json) {
+            log(JSON.stringify(json))
+        }
 
-    function log(text) {
-        var p = document.createElement('p')
-        p.innerText = text
-        logsEl.appendChild(p)
-    }
+        function log(text) {
+            var p = document.createElement('p')
+            p.innerText = text
+            logsEl.appendChild(p)
+        }
 
-    window.onload = function() {
-       var jsBtn = document.getElementById('js-call')
-       var kotlinBtn = document.getElementById('kotlin-call')
-       var callBtn = document.getElementById('open-call')
-       jsBtn.addEventListener('click', handleJsClick, false)
-       kotlinBtn.addEventListener('click', handleKotlinClick, false)
-       callBtn.addEventListener('click', handleCallClick, false)
+        window.onload = function () {
+            var jsBtn = document.getElementById('js-call')
+            var kotlinBtn = document.getElementById('kotlin-call')
+            var callBtn = document.getElementById('open-call')
+            var msgBtn = document.getElementById('msg-call')
+            jsBtn.addEventListener('click', handleJsClick, false)
+            kotlinBtn.addEventListener('click', handleKotlinClick, false)
+            callBtn.addEventListener('click', handleCallClick, false)
+            msgBtn.addEventListener('click', handleMsgClick, false)
 
-       function handleJsClick(ev) {
-        log('handleJsClick')
-        var data = {name: 'handleJsClick', value: 'H5发送消息'}
-        // 调用kotlin中的jsInterface对象
-        window.jsInterface.showToast(JSON.stringify(data))
-       }
-    
-       function handleKotlinClick(ev) {
-         log('kotlin callback')
-         // callback 方法
-         var json = { callback: 'kotlinCallback' }
-         window.jsInterface.kotlinCallback(JSON.stringify(json))
-       }
+            // 发送短信
+            function handleMsgClick(ev) {
+                log('handleMsgClick')
+                var data = { phone: 13329892182, msg: '短信内容' }
+                window.jsInterface.sendMessage(JSON.stringify(data))
+            }
 
-       function handleCallClick(ev) {
-         log('handleCallClick')
-         window.jsInterface.showPhoneDialog('1008611')
-       }
-    }
-</script>
+            function handleJsClick(ev) {
+                log('handleJsClick')
+                var data = { name: 'handleJsClick', value: 'H5发送消息' }
+                // 调用kotlin中的jsInterface对象
+                window.jsInterface.showToast(JSON.stringify(data))
+            }
+
+            function handleKotlinClick(ev) {
+                log('kotlin callback')
+                // callback 方法
+                var json = { callback: 'kotlinCallback' }
+                window.jsInterface.kotlinCallback(JSON.stringify(json))
+            }
+
+            function handleCallClick(ev) {
+                log('handleCallClick')
+                window.jsInterface.showPhoneDialog('1008611')
+            }
+        }
+    </script>
 </body>
+
 </html>
