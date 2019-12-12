@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
             super.onPageFinished(view, url)
             val json = JSONObject()
             json.put("name", "kotlin")
-            // 2. kotlin调用javscript方法
+            // 2. kotlin调用javascript方法a
             webView.loadUrl("javascript:showMessage(${json.toString()})")
         }
     }

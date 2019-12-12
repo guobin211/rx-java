@@ -12,15 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".activity.ExpandList"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
-                <!--主activity-->
+
+                <!-- 主activity -->
                 <action android:name="android.intent.action.MAIN" />
-                <!--启动界面-->
+                <!-- 启动界面 -->
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <!--启动模式-->
+        </activity> <!-- 启动模式 -->
         <activity
             android:name=".activity.ListViewActivity"
             android:launchMode="singleTask">

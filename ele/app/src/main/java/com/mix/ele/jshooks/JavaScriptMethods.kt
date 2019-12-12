@@ -22,7 +22,7 @@ class JavaScriptMethods(ctx: Context, web: WebView) {
     private var webView: WebView? = web
 
     // 自定义dialog
-    private val myBootomDialog: BottomDialog by lazy {
+    private val myBottomDialog: BottomDialog by lazy {
         BottomDialog(ctx)
     }
 
@@ -61,15 +61,15 @@ class JavaScriptMethods(ctx: Context, web: WebView) {
 
     @JavascriptInterface
     fun showPhoneDialog(phone: String) {
-        myBootomDialog.phone.text = phone
-        myBootomDialog.cancel_btn.setOnClickListener {
-            myBootomDialog.dismiss()
+        myBottomDialog.phone.text = phone
+        myBottomDialog.cancel_btn.setOnClickListener {
+            myBottomDialog.dismiss()
         }
         // 拨打电话
-        myBootomDialog.phone.setOnClickListener {
+        myBottomDialog.phone.setOnClickListener {
             callPhone(phone)
         }
-        myBootomDialog.show()
+        myBottomDialog.show()
     }
 
     /*

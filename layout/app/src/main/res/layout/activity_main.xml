@@ -46,7 +46,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="自定义控件" />
+
     <com.guobin.layout.components.SubmitButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ExpandListView" />
 </LinearLayout>

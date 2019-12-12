@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.guobin.layout.activity.BaseAdapterActivity;
+import com.guobin.layout.activity.ExpandList;
 import com.guobin.layout.activity.GridViewActivity;
 import com.guobin.layout.activity.LinerLayout;
 import com.guobin.layout.activity.ListViewActivity;
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     Button btn4;
     Button btn5;
     Button btn6;
+    Button btn8;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
         btn5.setOnClickListener(this.onListViewClick(5));
         btn6 = findViewById(R.id.button6);
         btn6.setOnClickListener(this.onListViewClick(6));
+        btn8 = findViewById(R.id.button8);
+        btn8.setOnClickListener(this.onListViewClick(8));
     }
 
     @Override
@@ -84,6 +88,8 @@ public class MainActivity extends AppCompatActivity {
                 } else if (id == 6) {
                     // 自定义控件
                     intent.setClass(MainActivity.this, ListViewActivity.class);
+                } else if (id == 8) {
+                    intent.setClass(MainActivity.this, ExpandList.class);
                 } else {
                     intent.setClass(MainActivity.this, ListViewActivity.class);
                 }
