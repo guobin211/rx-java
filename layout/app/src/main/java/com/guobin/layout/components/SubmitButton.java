@@ -10,7 +10,6 @@ import android.widget.Button;
 /**
  * @author guobin211
  * @version 0.0.1
- * @date 2019-11-28  19:52
  */
 @SuppressLint("AppCompatCustomView")
 public class SubmitButton extends Button {

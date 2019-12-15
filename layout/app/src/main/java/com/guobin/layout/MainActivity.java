@@ -36,20 +36,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btn1 = findViewById(R.id.button1);
-        btn1.setOnClickListener(this.onListViewClick(1));
-        btn2 = findViewById(R.id.button2);
-        btn2.setOnClickListener(this.onListViewClick(2));
-        btn3 = findViewById(R.id.button3);
-        btn3.setOnClickListener(this.onListViewClick(3));
-        btn4 = findViewById(R.id.button4);
-        btn4.setOnClickListener(this.onListViewClick(4));
-        btn5 = findViewById(R.id.button5);
-        btn5.setOnClickListener(this.onListViewClick(5));
-        btn6 = findViewById(R.id.button6);
-        btn6.setOnClickListener(this.onListViewClick(6));
-        btn8 = findViewById(R.id.button8);
-        btn8.setOnClickListener(this.onListViewClick(8));
+        this.initCustomListener();
     }
 
     @Override
@@ -68,6 +55,23 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "用户点击了" + title, Toast.LENGTH_SHORT).show();
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void initCustomListener() {
+        btn1 = findViewById(R.id.button1);
+        btn1.setOnClickListener(this.onListViewClick(1));
+        btn2 = findViewById(R.id.button2);
+        btn2.setOnClickListener(this.onListViewClick(2));
+        btn3 = findViewById(R.id.button3);
+        btn3.setOnClickListener(this.onListViewClick(3));
+        btn4 = findViewById(R.id.button4);
+        btn4.setOnClickListener(this.onListViewClick(4));
+        btn5 = findViewById(R.id.button5);
+        btn5.setOnClickListener(this.onListViewClick(5));
+        btn6 = findViewById(R.id.button6);
+        btn6.setOnClickListener(this.onListViewClick(6));
+        btn8 = findViewById(R.id.button8);
+        btn8.setOnClickListener(this.onListViewClick(8));
     }
 
     private View.OnClickListener onListViewClick(final int id) {

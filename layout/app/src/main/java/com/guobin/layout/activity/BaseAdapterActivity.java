@@ -25,13 +25,13 @@ public class BaseAdapterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base_adapter);
-        listView =findViewById(R.id.base_list_view);
+        listView = findViewById(R.id.base_list_view);
         dataList = new ArrayList<>();
         for (int i = 0; i < 50; i++) {
-           UserInfo userInfo = new UserInfo();
-           userInfo.name =  "张三" + i;
-           userInfo.age = 10 + i + "岁";
-           userInfo.sex =  i % 2 == 0 ? "男" : "女";
+            UserInfo userInfo = new UserInfo();
+            userInfo.name = "张三" + i;
+            userInfo.age = 10 + i + "岁";
+            userInfo.sex = i % 2 == 0 ? "男" : "女";
             dataList.add(userInfo);
         }
         listView.setAdapter(new UserInfoListAdapter(dataList));
