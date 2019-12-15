@@ -12,10 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".activity.ExpandList" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
-
                 <!-- 主activity -->
                 <action android:name="android.intent.action.MAIN" />
                 <!-- 启动界面 -->
@@ -40,6 +39,12 @@
             android:launchMode="singleTask" />
         <activity
             android:name=".activity.LinerLayout"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.FragActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.ExpandList"
             android:launchMode="singleTask" />
     </application>
 

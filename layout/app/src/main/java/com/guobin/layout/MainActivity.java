@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.guobin.layout.activity.BaseAdapterActivity;
 import com.guobin.layout.activity.ExpandList;
+import com.guobin.layout.activity.FragActivity;
 import com.guobin.layout.activity.GridViewActivity;
 import com.guobin.layout.activity.LinerLayout;
 import com.guobin.layout.activity.ListViewActivity;
@@ -93,9 +94,9 @@ public class MainActivity extends AppCompatActivity {
                     // 自定义控件
                     intent.setClass(MainActivity.this, ListViewActivity.class);
                 } else if (id == 8) {
-                    intent.setClass(MainActivity.this, ExpandList.class);
+                    intent.setClass(MainActivity.this, FragActivity.class);
                 } else {
-                    intent.setClass(MainActivity.this, ListViewActivity.class);
+                    intent.setClass(MainActivity.this, ExpandList.class);
                 }
                 startActivity(intent);
             }
