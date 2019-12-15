@@ -18,24 +18,24 @@ import com.guobin.layout.R;
  */
 public class ImageFragment extends Fragment {
 
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        Log.i("ImageFragment", "onCreate");
-        super.onCreate(savedInstanceState);
-    }
+  @Override
+  public void onCreate(@Nullable Bundle savedInstanceState) {
+    Log.i("ImageFragment", "onCreate");
+    super.onCreate(savedInstanceState);
+  }
 
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
-        Log.i("ImageFragment", "onCreateView");
-        return inflater.inflate(R.layout.frag_image_center, container, false);
-    }
+  @Override
+  public View onCreateView(@NonNull LayoutInflater inflater,
+      @Nullable ViewGroup container,
+      @Nullable Bundle savedInstanceState) {
+    Log.i("ImageFragment", "onCreateView");
+    // 获取布局资源文件
+    return inflater.inflate(R.layout.frag_image_center, container, false);
+  }
 
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        Log.i("ImageFragment", "onDestroy");
-    }
+  @Override
+  public void onDestroy() {
+    Log.i("ImageFragment", "onDestroy");
+    super.onDestroy();
+  }
 }
