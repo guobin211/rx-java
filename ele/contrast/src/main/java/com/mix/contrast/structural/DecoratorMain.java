@@ -39,17 +39,18 @@ abstract class BaseDocument implements DomElement {
 
 class Document extends BaseDocument {
 
+    private static final Integer DOUBLE_INT = 2;
+
     private int random = 0;
 
     Document(DomElement domElement) {
         super(domElement);
     }
 
-    @SuppressWarnings("AlibabaUndefineMagicConstant")
     @Override
     public void render() {
         super.render();
-        if (this.random % 2 == 0) {
+        if (this.random % DOUBLE_INT == 0) {
             this.setColor("#ffffff");
         } else {
             this.setColor("#cccccc");

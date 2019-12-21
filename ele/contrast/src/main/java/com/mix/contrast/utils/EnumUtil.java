@@ -2,7 +2,6 @@ package com.mix.contrast.utils;
 
 import com.mix.contrast.enums.CodeEnum;
 import com.mix.contrast.enums.PayStatusEnum;
-import com.sun.org.apache.bcel.internal.classfile.InnerClass;
 
 /**
  * @author guobin211
