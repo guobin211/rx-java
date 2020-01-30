@@ -6,4 +6,7 @@ package com.mix.contrast.enums;
  */
 public interface CodeEnum {
     Integer getCode();
+    String getMessage();
+    String codeToMessage(int code);
+    Integer messageToCode(String message);
 }

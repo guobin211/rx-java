@@ -24,7 +24,34 @@ public enum PayStatusEnum implements CodeEnum {
         return this.code;
     }
 
+    @Override
     public String getMessage() {
         return message;
+    }
+
+    @Override
+    public String codeToMessage(int code) {
+        switch (code) {
+            case 0:
+                return "等待支付";
+            case 1:
+                return "支付成功";
+            case 2:
+                return "支付失败";
+        }
+        return null;
+    }
+
+    @Override
+    public Integer messageToCode(String message) {
+        switch (message) {
+            case "等待支付":
+                return 0;
+            case "支付成功":
+                return 1;
+            case "支付失败":
+                return 2;
+        }
+        return null;
     }
 }

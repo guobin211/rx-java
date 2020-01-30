@@ -1,6 +1,7 @@
 package com.mix.contrast.utils;
 
 import com.mix.contrast.enums.CodeEnum;
+import com.mix.contrast.enums.GoodsStatusEnum;
 import com.mix.contrast.enums.PayStatusEnum;
 
 /**
@@ -9,7 +10,7 @@ import com.mix.contrast.enums.PayStatusEnum;
  */
 public class EnumUtil {
 
-    public static <T extends CodeEnum> T getByCode(Integer code, Class<T> enumClass) {
+    private static <T extends CodeEnum> T getByCode(Integer code, Class<T> enumClass) {
         for (T each: enumClass.getEnumConstants()) {
             if (code.equals(each.getCode())) {
                 return each;
@@ -23,5 +24,9 @@ public class EnumUtil {
         PayStatusEnum res = EnumUtil.getByCode(wait, PayStatusEnum.class);
         assert res != null;
         System.out.println(res.getMessage());
+
+        GoodsStatusEnum goodsStatusEnum = EnumUtil.getByCode(11, GoodsStatusEnum.class);
+        assert goodsStatusEnum != null;
+        System.out.println(goodsStatusEnum.getMessage());
     }
 }
