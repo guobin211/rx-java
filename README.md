@@ -2,7 +2,7 @@
 
 design your code
     
-> need jdk 11
+> need jdk >= 11
 > use java or kotlin
 
 ### 基本数据结构
