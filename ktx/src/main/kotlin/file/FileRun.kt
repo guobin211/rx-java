@@ -28,6 +28,7 @@ object FileRun {
      * 获取路径下的文件夹和文件
      */
     fun readPath(path: String): FilePath {
+        print(path)
         val fileTreeWalk: FileTreeWalk = File("/").walk()
         val dirs = mutableListOf<String>()
         val files = mutableListOf<String>()
