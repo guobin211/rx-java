@@ -1,0 +1,3 @@
+include ':gtree'
+include ':app'
+rootProject.name = "graph"
