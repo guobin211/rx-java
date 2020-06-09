@@ -1,2 +1,0 @@
-include ':app', ':contrast'
-rootProject.name='ele'
