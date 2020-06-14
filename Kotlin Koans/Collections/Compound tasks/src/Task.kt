@@ -1,0 +1,19 @@
+// Find the most expensive product among all the delivered products
+// ordered by the customer. Use `Order.isDelivered` flag.
+fun findMostExpensiveProductBy(customer: Customer): Product? {
+    val isDelivered = customer.orders.filter { it.isDelivered }
+    val allProducts = isDelivered.flatMap { it.products }
+    return allProducts.maxBy { it.price }
+}
+
+// Count the amount of times a product was ordered.
+// Note that a customer may order the same product several times.
+fun Shop.getNumberOfTimesProductWasOrdered(product: Product): Int {
+    return customers.flatMap { it.getOrderedProducts() }
+            .count { p ->
+                p == product
+            }
+}
+
+fun Customer.getOrderedProducts(): List<Product> =
+        orders.flatMap { it.products }
