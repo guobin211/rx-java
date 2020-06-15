@@ -1,3 +1,0 @@
-include ':data_object'
-include ':app'
-rootProject.name = "kotlin1"
