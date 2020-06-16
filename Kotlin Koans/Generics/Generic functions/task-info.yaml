@@ -5,7 +5,7 @@ files:
   visible: true
   placeholders:
   - offset: 20
-    length: 311
+    length: 312
     placeholder_text: fun partitionTo() = TODO()
     initial_state:
       length: 26
