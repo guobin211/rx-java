@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "kotlin-app"
+rootProject.name = "kotlinapp"

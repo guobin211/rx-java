@@ -1,4 +1,4 @@
-package com.mix.kotlin_app
+package com.mix.kotlinapp
 
 import org.junit.Test
 
