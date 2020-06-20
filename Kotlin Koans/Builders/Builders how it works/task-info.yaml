@@ -4,7 +4,7 @@ files:
 - name: src/Task.kt
   visible: true
   placeholders:
-  - offset: 91
+  - offset: 74
     length: 42
     placeholder_text: 1 to null, 2 to null, 3 to null, 4 to null
     initial_state:
@@ -13,7 +13,7 @@ files:
     initialized_from_dependency: false
     possible_answer: 1 to c, 2 to b, 3 to b, 4 to c
     selected: true
-    status: Unchecked
+    status: Failed
   text: |
     import Answer.*
 
@@ -48,5 +48,5 @@ files:
         }
     }
   learner_created: false
-status: Unchecked
+status: Failed
 record: -1
