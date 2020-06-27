@@ -57,7 +57,7 @@ class MainFragment : Fragment() {
     private fun initNotifyButton() {
         main_frag_button.setOnClickListener {
             log("main_frag_button click")
-            this.openNotify();
+            this.openNotify()
         }
     }
 
