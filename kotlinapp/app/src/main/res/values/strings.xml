@@ -3,4 +3,10 @@
     <string name="username_placeholder">请输入您的账户</string>
     <string name="open_notify">打开通知</string>
     <string name="notify_text">自定义通知</string>
+    <string name="video_avatar">video-avatar</string>
+    <string name="music_name">夜曲</string>
+    <string name="close_icon">close</string>
+    <string name="previous">previous</string>
+    <string name="next">next</string>
+    <string name="play">play</string>
 </resources>

@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RemoteViews
+import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.widget.addTextChangedListener
@@ -63,14 +64,33 @@ class MainFragment : Fragment() {
 
     private fun openNotify() {
         val msg = NotificationCompat.Builder(context!!, channelId)
+            .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
             .setSmallIcon(R.drawable.ic_launcher_foreground)
-            .setCustomContentView(RemoteViews("com.mix.kotlinapp", R.layout.global_notify))
+            .setCustomBigContentView(RemoteViews("com.mix.kotlinapp", R.layout.global_notify))
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
             .build()
-        log("builder: ${context.toString()}")
         val notifyManage = NotificationManagerCompat.from(context!!)
         notifyManage.notify(this.notificationId, msg)
+    }
 
+    private fun initNotifyAction() {
+        close_dialog.setOnClickListener {
+            log("close_dialog click")
+            Toast.makeText(context, "关闭", Toast.LENGTH_SHORT).show()
+        }
+        previous.setOnClickListener {
+            log("previous click")
+            Toast.makeText(context, "上一首", Toast.LENGTH_SHORT).show()
+        }
+        next.setOnClickListener {
+            log("next click")
+            Toast.makeText(context, "下一首", Toast.LENGTH_SHORT).show()
+        }
+        play.setOnClickListener {
+            log("play click")
+            println(it.background)
+            Toast.makeText(context, "播放或暂停", Toast.LENGTH_SHORT).show()
+        }
     }
 
 }
