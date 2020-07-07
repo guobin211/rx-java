@@ -32,9 +32,6 @@ class Queue<E> : IQueue<E> {
 
     override fun toString(): String {
         var res = "";
-//        for (index in this.data.size - 1 downTo 0) {
-//            res += this.data[index];
-//        }
         for (index in 0 until this.data.size) {
             res += this.data[index];
         }
