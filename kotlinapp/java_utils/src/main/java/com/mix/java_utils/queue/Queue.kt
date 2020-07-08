@@ -1,6 +1,4 @@
-package com.mix.java_utils
-
-import com.mix.java_utils.base.IQueue
+package com.mix.java_utils.queue
 
 /**
  * com.mix.java_utils

@@ -1,4 +1,4 @@
-package com.mix.java_utils.base;
+package com.mix.java_utils.queue;
 
 /**
  * com.mix.java_utils.base

@@ -1,11 +1,13 @@
 package com.mix.java_utils
 
-import com.mix.java_utils.base.IQueue
+import com.mix.java_utils.queue.Queue
+import java.util.*
 
 fun main() {
     println("Hello Kotlin Library")
 
-    testQueue()
+//  testQueue()
+    testPriorityQueue()
 }
 
 fun testQueue() {
@@ -32,4 +34,20 @@ fun testQueue() {
     }
     val time2End = System.currentTimeMillis()
     println("queue2: " + (time2End - time2))
+}
+
+fun testPriorityQueue() {
+    val priorityQueue = PriorityQueue<Number>()
+    val count = 10
+    for (i in 0 until count) {
+        priorityQueue.add((Math.random() * 10 - 1))
+    }
+
+    println(priorityQueue.size)
+
+    println(priorityQueue.toString())
+
+    while (!priorityQueue.isEmpty()) {
+        println(priorityQueue.poll())
+    }
 }
